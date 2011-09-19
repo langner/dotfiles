@@ -1,0 +1,8 @@
+import atexit
+import os
+import readline
+
+# History.
+history = os.path.expanduser('~/.pythonhist')
+readline.read_history_file(history)
+atexit.register(readline.write_history_file, history)
