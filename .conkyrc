@@ -1,0 +1,103 @@
+background yes
+update_interval 2
+total_run_times 0
+
+own_window yes
+own_window_type normal
+own_window_hints undecorated,skip_pager,skip_taskbar
+own_window_transparent no
+own_window_argb_visual yes
+own_window_argb_value 0
+own_window_title "Conky (local)"
+
+double_buffer yes
+
+use_xft yes
+xftfont Bitstream Vera Sans Mono:size=9
+xftalpha 1
+
+alignment top_left
+maximum_width 410
+minimum_size 400
+
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+
+default_color white
+default_shade_color black
+default_outline_color white
+
+gap_x 10
+gap_y 10
+
+override_utf8_locale no
+short_units yes
+show_graph_range yes
+show_graph_scale no
+
+cpu_avg_samples 4
+diskio_avg_samples 3
+net_avg_samples 5
+no_buffers yes
+top_cpu_separate no
+
+TEXT
+
+${offset 10}${color slate grey}${time %Z}: ${color }${time %a, %e %B %G %H:%M:%S}
+${offset 10}${color slate grey}hostname: ${color }${nodename} (${machine})
+${offset 10}${color slate grey}kernel: ${color }${sysname} $kernel
+${offset 10}${color slate grey}uptime: ${color }$uptime
+
+${offset 10}${color slate grey}CPUs: ${color }${cpu}%${alignr}${user_number} ${color slate grey}users${color }
+${offset 10}${color slate grey}freq: ${color }${freq}MHz${alignr}${processes}${color slate grey} processes${color }
+${offset 10}${color slate grey}load: ${color }${loadavg}${cpu 2}${alignr}${threads} ${color slate grey}threads${color }
+${offset 10}${cpugraph 30,400 00ff00 00ff00}
+${offset 10}${color slate grey}processor:              ${offset 10}${color slate grey}memory:
+${offset 10}${color ddaa00} ${top name 1}${top cpu 1}${offset 20}${color ddaa00} ${top_mem name 1}${top_mem mem 1}
+${offset 10}${color lightgrey} ${top name 2}${top cpu 2}${offset 20}${color lightgrey} ${top_mem name 2}${top_mem mem 2}
+${offset 10}${color lightgrey} ${top name 3}${top cpu 3}${offset 20}${color lightgrey} ${top_mem name 3}${top_mem mem 3}
+${offset 10}${color lightgrey} ${top name 4}${top cpu 4}${offset 20}${color lightgrey} ${top_mem name 4}${top_mem mem 4}
+${offset 10}${color lightgrey} ${top name 5}${top cpu 5}${offset 20}${color lightgrey} ${top_mem name 5}${top_mem mem 5}
+${offset 10}${color lightgrey} ${top name 6}${top cpu 6}${offset 20}${color lightgrey} ${top_mem name 6}${top_mem mem 6}
+
+
+${offset 10}${color slate grey}swap: ${color } $swapperc% ($swap/$swapmax)
+${offset 10}${swapbar 3,350}
+${offset 10}${color slate grey}RAM:  ${color } $memperc% ($mem/$memmax)
+${offset 10}${membar 3,350}
+${offset 10}${color lightgrey}buffers: ${color }${buffers}${alignr 50}${color lightgrey}cached: ${color }${cached}
+
+
+${offset 10}${color slate grey}/dev/sda: ${color }${hddtemp /dev/sda}C
+${offset 10}${color slate grey}/dev/sdb: ${color }${hddtemp /dev/sdb}C
+${offset 10}${diskiograph 30,350 550000 ff0000}
+${offset 10}${color slate grey}/: ${color }${fs_used /}${alignr 50}${fs_size /}
+${offset 10}${fs_bar 3,350 /}
+${offset 10}${color slate grey}/usr: ${color }${fs_used /usr}${alignr 50}${fs_size /usr}
+${offset 10}${fs_bar 3,350 /usr}
+${offset 10}${color slate grey}/var: ${color }${fs_used /var}${alignr 50}${fs_size /var}
+${offset 10}${fs_bar 3,350 /var}
+${offset 10}${color slate grey}/tmp: ${color }${fs_used /tmp}${alignr 50}${fs_size /tmp}
+${offset 10}${fs_bar 3,350 /tmp}
+${offset 10}${color slate grey}/opt: ${color }${fs_used /opt}${alignr 50}${fs_size /opt}
+${offset 10}${fs_bar 3,350 /opt}
+${offset 10}${color slate grey}/usr/local: ${color }${fs_used /usr/local}${alignr 50}${fs_size /usr/local}
+${offset 10}${fs_bar 3,350 /usr/local}
+${offset 10}${color slate grey}/home: ${color }${fs_used /home}${alignr 50}${fs_size /home}
+${offset 10}${fs_bar 3,350 /home}
+${offset 10}${color slate grey}/scratch: ${color }${fs_used /scratch}${alignr 50}${fs_size /scratch}
+${offset 10}${fs_bar 3,350 /scratch}
+${if_mounted /mnt/tb1}${offset 10}${color slate grey}/mnt/tb2: ${color }${fs_used /mnt/tb2}${alignr 50}${fs_size /mnt/tb2}
+${offset 10}${fs_bar 3,350 /mnt/tb2}${endif}
+
+
+${offset 10}${color slate grey}eth0 (${addr eth0}):${color }
+${offset 10}${upspeedgraph eth0 30,150 000055 0000ff} ${color lightgrey}${offset 10}${downspeedgraph eth0 30,150 000055 0000ff} ${color lightgrey}
+${offset 10}up: ${color }${upspeed eth0}${offset 10}${alignr 85}down: ${color }${downspeed eth0}
+
+
+${offset 10}${color slate grey}mpd: ${color }${mpd_status}${if_mpd_playing} (${mpd_percent}%)${endif}
+${if_mpd_playing}${offset 10}${font Bitstream Vera Sans:size=8$}${mpd_smart 65}...${font }${endif}
+
