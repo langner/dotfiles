@@ -1,0 +1,37 @@
+#
+# This is the GTK+ RC file for gentoo. The first (rudimentary)
+# GTK+ RC support was added in version 0.9.15.
+#
+# Currently named widgets are:
+# "mainPane{0,1}"	The CLists in the panes.
+# "cstPreview"		The preview CList in style config.
+# "txvText"		The Text widget used for viewing
+#			text (output capture, ViewText & ViewHex cmds).
+#
+# Other widgets must be accessed by their class names.
+#
+# For information about how to write GTK+ RC files, see the
+# official GTK+ tutorial (doubtlessly available from www.gtk.org).
+#
+
+# Syntax according to tutorial:
+#
+# style <name> [= <name>]
+# {
+#   <option>
+# }
+#
+# widget <widget_set> style <style_name>
+# widget_class <widget_class_set> style <style_name>
+
+style "Style"
+{
+  font_name = "Fixed"
+  base[NORMAL] = "#cccccc"
+  base[ACTIVE] = "#000000"
+}
+
+widget "*mainPane0"  style "Style"
+widget "*mainPane1"  style "Style"
+widget "*cstPreview" style "Style"
+widget "*txvText"    style "Style"
