@@ -55,4 +55,3 @@ export PATH=$HOME/bin:/opt/bin:$PATH
 if [ -f ~/.bash_private ]; then
     . ~/.bash_private
 fi
-.
