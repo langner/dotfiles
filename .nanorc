@@ -1,0 +1,43 @@
+set autoindent
+set brackets ""')>]}"
+set matchbrackets "(]}"
+set morespace
+#set mouse
+set multibuffer
+set smooth
+
+include "/usr/share/nano/asm.nanorc"
+include "/usr/share/nano/c.nanorc"
+include "/usr/share/nano/groff.nanorc"
+include "/usr/share/nano/html.nanorc"
+include "/usr/share/nano/java.nanorc"
+include "/usr/share/nano/man.nanorc"
+include "/usr/share/nano/mutt.nanorc"
+include "/usr/share/nano/nanorc.nanorc"
+include "/usr/share/nano/patch.nanorc"
+include "/usr/share/nano/perl.nanorc"
+include "/usr/share/nano/python.nanorc"
+include "/usr/share/nano/ruby.nanorc"
+include "/usr/share/nano/sh.nanorc"
+include "/usr/share/nano/tex.nanorc"
+
+include "~/.nano/apache2.nanorc"
+include "~/.nano/changelog.nanorc"
+include "~/.nano/changelogs.nanorc"
+include "~/.nano/css.nanorc"
+include "~/.nano/debian.nanorc"
+include "~/.nano/delphi.nanorc"
+include "~/.nano/gentoo.nanorc"
+include "~/.nano/info.nanorc"
+include "~/.nano/js.nanorc"
+include "~/.nano/makefile.nanorc"
+include "~/.nano/nscd.nanorc"
+include "~/.nano/passwd.nanorc"
+include "~/.nano/php.nanorc"
+include "~/.nano/php2.nanorc"
+include "~/.nano/rsync.nanorc"
+include "~/.nano/tcl.nanorc"
+include "~/.nano/tex.nanorc"
+include "~/.nano/urls.nanorc"
+include "~/.nano/xml.nanorc"
+include "~/.nano/xorg.nanorc"
