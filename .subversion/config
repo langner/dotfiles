@@ -1,0 +1,26 @@
+### Section for authentication and authorization customizations.
+[auth]
+
+### Section for configuring external helper applications.
+[helpers]
+editor-cmd = nano
+
+### Section for configuring tunnel agents.
+[tunnels]
+ssh = $SVN_SSH ssh -o ControlMaster=no
+
+### Section for configuring miscelleneous Subversion options.
+[miscellany]
+global-ignores = *.o *.so *.so.[0-9]* *.a *.pyc *.pyo
+
+### Section for configuring automatic properties.
+[auto-props]
+*.c = svn:eol-style=native
+*.cpp = svn:eol-style=native
+*.h = svn:keywords=Author Date Id Rev URL;svn:eol-style=native
+*.sh = svn:eol-style=native;svn:executable
+*.txt = svn:eol-style=native;svn:keywords=Author Date Id Rev URL;
+*.png = svn:mime-type=image/png
+*.jpg = svn:mime-type=image/jpeg
+Makefile = svn:eol-style=native
+
