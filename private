@@ -1,0 +1,14 @@
+ENCRYPTED=~/data/personal/.private.encfs
+DECRYPTED=~/data/personal/private
+
+if [[ $@ == *on* ]] && ! grep -q data/personal/private /proc/mounts
+then
+	mkdir -p $DECRYPTED
+	encfs $ENCRYPTED $DECRYPTED
+	exit 0
+elif [[ $@ == *off* ]] && grep -q data/personal/private /proc/mounts
+then
+	fusermount -u $DECRYPTED
+	rmdir $DECRYPTED
+	exit 0
+fi
