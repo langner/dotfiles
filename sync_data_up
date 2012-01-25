@@ -1,0 +1,25 @@
+LOCAL=$HOME
+SSH=/usr/bin/ssh
+KEY=$HOME/.ssh/id_rsa
+REMOTE=$HOME
+
+case `hostname` in
+	cadenza)
+		SERVER=fwnc7111
+		;;
+	fwnc7111)
+		SERVER=poly
+		;;
+	poly)
+		SERVER=fwnc7111
+		;;
+	*)
+		SERVER=fwnc7111
+		;;
+esac
+
+OPTIONS="--verbose --progress --stats --human-readable --archive --compress --update --delete"
+EXCLUDE="--exclude "personal/private/" --exclude "*.backup" --exclude "*.bak" --exclude "*~" --exclude "*.pyc""
+
+rsync $OPTIONS $EXCLUDE --rsh="$SSH -i $KEY" --bwlimit=256 $LOCAL/data $USER@$SERVER:$REMOTE
+                        
