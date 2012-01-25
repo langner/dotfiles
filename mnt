@@ -1,0 +1,11 @@
+target=$1
+remote="."
+if [ ! -f $2 ]; then
+	remote=$2
+fi
+user=$USER
+if [ ! -f $3 ]; then
+	user=$3
+fi
+mkdir -p ~/mnt/$target
+sshfs -o allow_root -o uid=`id -u` -o gid=`id -g` ${user}@${target}:${remote} ~/mnt/$target
