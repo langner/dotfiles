@@ -1,0 +1,1 @@
+t=`mktemp`; echo "import sys; sys.path=[p for p in sys.path if not 'usr/local' in p]" > $t; python -i $t $@; rm -rvf $t
