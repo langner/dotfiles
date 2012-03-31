@@ -13,6 +13,9 @@ case `hostname` in
 	poly)
 		SERVER=fwnc7111
 		;;
+	rubato)
+		SERVER=cartman
+		;;
 	*)
 		SERVER=fwnc7111
 		;;
