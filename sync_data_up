@@ -10,6 +10,9 @@ case `hostname` in
 	fwnc7111)
 		SERVER=poly
 		;;
+	piuma)
+		SERVER=cartman
+		;;
 	poly)
 		SERVER=fwnc7111
 		;;
