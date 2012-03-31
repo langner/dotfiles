@@ -1,0 +1,1 @@
+/usr/bin/abook -C ~/.abookrc --datafile ~/data/personal/pim/addressbook/addressbook.abook $@
