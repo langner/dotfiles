@@ -3,8 +3,15 @@ SSH=/usr/bin/ssh
 KEY=$HOME/.ssh/id_rsa
 REMOTE=$HOME/data/*
 
-# By default synchronize with fwnc7111
-case `hostname` in
+die() {
+	echo >&2 "$@"
+	exit 1
+}
+
+# Set the host to synchronize with, from the first argument
+# If not given, synchronize with fwnc7111 by default
+[ "$#" -lt 2 ] || die "At most one argument, $# given"
+[ "$#" -eq 1 ] && SERVER=$1 || case `hostname` in
 	fwnc7111)
 		SERVER=poly
 		;;
@@ -21,6 +28,7 @@ case `hostname` in
 		SERVER=fwnc7111
 		;;
 esac
+echo "Synchronizing with $SERVER ..."
 
 # Options to use
 OPTIONS="--verbose --progress --stats --human-readable --archive --compress --update --delete"
