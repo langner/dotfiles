@@ -3,6 +3,7 @@ SSH=/usr/bin/ssh
 KEY=$HOME/.ssh/id_rsa
 REMOTE=$HOME/data/*
 
+# By default synchronize with fwnc7111
 case `hostname` in
 	fwnc7111)
 		SERVER=poly
@@ -21,7 +22,11 @@ case `hostname` in
 		;;
 esac
 
+# Options to use
 OPTIONS="--verbose --progress --stats --human-readable --archive --compress --update --delete"
+
+# Exclude some files
 EXCLUDE="--exclude "personal/private/" --exclude "*.backup" --exclude "*.bak" --exclude "*~" --exclude "*.pyc""
 
+# The actual synchronization
 rsync $OPTIONS $EXCLUDE --rsh="$SSH -i $KEY" $USER@$SERVER:$REMOTE $LOCAL

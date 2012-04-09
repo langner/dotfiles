@@ -1,1 +1,6 @@
-t=`mktemp`; echo "import sys; sys.path=[p for p in sys.path if not 'usr/local' in p]" > $t; python -i $t $@; rm -rvf $t
+# Script to run a python script without using local include paths
+
+t=`mktemp`
+echo "import sys; sys.path=[p for p in sys.path if not 'usr/local' in p]" > $t
+python -i $t $@
+rm -rvf $t

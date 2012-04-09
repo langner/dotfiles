@@ -1,2 +1,4 @@
-echo written by Karol Langner
+# Print an email signature
+
+echo written by Karol M. Langner
 date

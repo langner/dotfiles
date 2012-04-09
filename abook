@@ -1,1 +1,3 @@
-/usr/bin/abook -C ~/.abookrc --datafile ~/data/personal/pim/addressbook/addressbook.abook $@
+# Run the command, but with alternate config and data file
+DATAFILE=~/data/personal/pim/addressbook/addressbook.abook
+/usr/bin/abook -C ~/.abookrc --datafile $DATAFILE $@

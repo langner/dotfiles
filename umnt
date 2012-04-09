@@ -1,2 +1,5 @@
+# Umount a directory on a remote machine
+# Assume the mount point used by the script `mnt`
+
 target=$1
 fusermount -u ~/mnt/$target
