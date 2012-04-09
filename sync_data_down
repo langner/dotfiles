@@ -24,4 +24,4 @@ esac
 OPTIONS="--verbose --progress --stats --human-readable --archive --compress --update --delete"
 EXCLUDE="--exclude "personal/private/" --exclude "*.backup" --exclude "*.bak" --exclude "*~" --exclude "*.pyc""
 
-rsync $OPTIONS $EXCLUDE --rsh="$SSH -i $KEY" --bwlimit=512 $USER@$SERVER:$REMOTE $LOCAL
+rsync $OPTIONS $EXCLUDE --rsh="$SSH -i $KEY" $USER@$SERVER:$REMOTE $LOCAL
