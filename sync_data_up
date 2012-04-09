@@ -4,17 +4,14 @@ KEY=$HOME/.ssh/id_rsa
 REMOTE=$HOME
 
 case `hostname` in
-	cadenza)
-		SERVER=fwnc7111
-		;;
 	fwnc7111)
 		SERVER=poly
 		;;
-	piuma)
-		SERVER=cartman
+	niuma)
+		SERVER=linda
 		;;
-	poly)
-		SERVER=fwnc7111
+	piuma)
+		SERVER=linda
 		;;
 	rubato)
 		SERVER=cartman
