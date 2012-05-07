@@ -19,5 +19,5 @@ fi
 mkdir -p ~/mnt/$target
 
 # The actual mount
-OPTS="-o allow_root -o uid=`id -u` -i gid=`id -g`"
+OPTS="-o allow_root -o uid=`id -u` -o gid=`id -g`"
 sshfs $OPTS ${user}@${target}:${remote} ~/mnt/$target
