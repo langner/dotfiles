@@ -1,41 +1,29 @@
-LOCAL=$HOME/data/*
+# A script to synchronize a remote directory with a local one.
+# This uses rsync in archive/update/delete mode, so it is quite
+#   possible to loose data remotely is there are files there
+#   that are not present in the local location.
+
 SSH=/usr/bin/ssh
-KEY=$HOME/.ssh/id_rsa
-REMOTE=$HOME/data
+
+# Assume these are set in the shell, or set them here.
+# SYNC_EXCLUDE="--exclude "*.backup" --exclude "*.bak" --exclude "*~" --exclude "*.pyc""
+# SYNC_HOST=myhost
+# SYNC_KEY=$HOME/.ssh/id_rsa
+# SYNC_LOCAL=$HOME/mydata
+# SYNC_REMOTE=$HOME/mydata
 
 die () {
 	echo >&2 "$@"
 	exit 1
 }
 
-# Set the host to synchronize with, from the first argument
-# If not given, synchronize with fwnc7111 by default
+# Set the host to synchronize with, from the first argument.
+# If not given, synchronize with SYNC_HOST by default.
 [ "$#" -lt 2 ] || die "At most one argument, $# given"
-[ "$#" -eq 1 ] && SERVER=$1 || case `hostname` in
-	fwnc7111)
-		SERVER=poly
-		;;
-	niuma)
-		SERVER=linda
-		;;
-	piuma)
-		SERVER=linda
-		;;
-	rubato)
-		SERVER=cartman
-		;;
-	*)
-		SERVER=fwnc7111
-		;;
-esac
-echo "Synchronizing with $SERVER ..."
-
-# Options to use
-OPTIONS="--verbose --progress --stats --human-readable --archive --compress --update --delete"
-
-# Exclude some files
-EXCLUDE="--exclude "personal/private/" --exclude "*.backup" --exclude "*.bak" --exclude "*~" --exclude "*.pyc""
+[ "$#" -eq 1 ] && SERVER=$1 || SERVER=$SYNC_HOST
 
 # The actual synchronization
-rsync $OPTIONS $EXCLUDE --rsh="$SSH -i $KEY" $LOCAL $USER@$SERVER:$REMOTE
+echo "Synchronizing with $SERVER ..."
+OPTIONS="--verbose --progress --stats --human-readable --archive --compress --update --delete"
+rsync $OPTIONS $SYNC_EXCLUDE --rsh="$SSH -i $SYNC_KEY" $SYNC_LOCAL/* $USER@$SERVER:$SYNC_REMOTE
 
