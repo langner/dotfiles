@@ -1,0 +1,21 @@
+# A script to mount/unmount a private encrypted directory.
+# Checks first whether the mount point is already mounted.
+# Mount -- when 'on' is in the command line.
+# Unmount -- when 'off' is in the command line.
+
+# Assume the encrypted and decrypted directories have been set,
+#   or set them here below.
+# PRIVATE_ENCRYPTED=/home/me/dir/encrypted
+# PRIVATE_DECRYPTED=/home/me/dir/decrypted
+
+if [[ $@ == *on* ]] && ! grep -q data/personal/private /proc/mounts
+then
+	mkdir -p $PRIVATE_DECRYPTED
+	encfs $PRIVATE_ENCRYPTED $PRIVATE_DECRYPTED
+	exit 0
+elif [[ $@ == *off* ]] && grep -q $PRIVATE_DECRYPTED /proc/mounts
+then
+	fusermount -u $PRIVATE_DECRYPTED
+	rmdir $PRIVATE_DECRYPTED
+	exit 0
+fi

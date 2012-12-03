@@ -1,0 +1,5 @@
+# Run abook, but with an alternate config file and custom data file.
+# Assume ABOOK is set in the shell, or set it here.
+# ABOOK=/home/me/directory/addressbook.abook
+
+/usr/bin/abook -C ~/.abookrc --datafile $ABOOK $@

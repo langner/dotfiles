@@ -1,0 +1,28 @@
+# A script to synchronize a local directory with a remote one.
+# This uses rsync in archive/update/delete mode, so it is quite
+#   possible to lose data locally if there are files there
+#   that are not present in the remote location.
+
+SSH=/usr/bin/ssh
+
+# Assume these are set in the shell, or set them here.
+# SYNC_EXCLUDE="--exclude "*.backup" --exclude "*.bak" --exclude "*~" --exclude "*.pyc""
+# SYNC_HOST=myhost
+# SYNC_KEY=$HOME/.ssh/id_rsa
+# SYNC_LOCAL=$HOME/mydata
+# SYNC_REMOTE=$HOME/mydata
+
+die() {
+	echo >&2 "$@"
+	exit 1
+}
+
+# Set the host to synchronize with, from the first argument.
+# If not given, synchronize with SYNC_HOST by default.
+[ "$#" -lt 2 ] || die "At most one argument, $# given"
+[ "$#" -eq 1 ] && SERVER=$1 || SERVER=$SYNC_HOST
+
+# The actual synchronization
+echo "Synchronizing with $SERVER ..."
+OPTIONS="--verbose --progress --stats --human-readable --archive --compress --update --delete"
+rsync $OPTIONS $SYNC_EXCLUDE --rsh="$SSH -i $SYNC_KEY" $USER@$SERVER:$SYNC_REMOTE/* $SYNC_LOCAL

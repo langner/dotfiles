@@ -1,0 +1,5 @@
+# Umount a directory mounted via sshfs from a remote machine.
+# Assume the mount point location used by the corresponding script `mnt`.
+
+target=$1
+fusermount -u ~/mnt/$target

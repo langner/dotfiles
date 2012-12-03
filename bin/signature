@@ -1,0 +1,6 @@
+# Print an email signature.
+# Assume FULLNAME is set, or set it here.
+# FULLNAME="My Full Name"
+
+echo written by $FULLNAME
+date

@@ -1,0 +1,23 @@
+# Mount a directory on a remote machine.
+
+# First argument is the target machine.
+target=$1
+
+# Second argument (optional) is the remote directory.
+remote="."
+if [ ! -f $2 ]; then
+	remote=$2
+fi
+
+# Third argument (optional) is the remote user.
+user=$USER
+if [ ! -f $3 ]; then
+	user=$3
+fi
+
+# Create the local mount point.
+mkdir -p ~/mnt/$target
+
+# Now perform the actual mount.
+OPTS="-o allow_root -o uid=`id -u` -o gid=`id -g`"
+sshfs $OPTS ${user}@${target}:${remote} ~/mnt/$target
