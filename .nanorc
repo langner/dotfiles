@@ -6,6 +6,9 @@ set morespace
 set multibuffer
 set smooth
 
+unset nowrap
+set fill "-5"
+
 include "/usr/share/nano/asm.nanorc"
 include "/usr/share/nano/c.nanorc"
 include "/usr/share/nano/groff.nanorc"
@@ -31,6 +34,7 @@ include "~/.nano/gentoo.nanorc"
 include "~/.nano/info.nanorc"
 include "~/.nano/js.nanorc"
 include "~/.nano/makefile.nanorc"
+include "~/.nano/mutt.nanorc"
 include "~/.nano/nscd.nanorc"
 include "~/.nano/passwd.nanorc"
 include "~/.nano/php.nanorc"
