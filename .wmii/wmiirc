@@ -13,8 +13,8 @@ noticetimeout=5
 noticebar=/rbar/!notice
 
 # Colors are defined in tuples: <text> <background> <border>
-export WMII_NORMCOLORS='#000000 #c1c48b #81654f'
-export WMII_FOCUSCOLORS='#000000 #81654f #000000'
+export WMII_NORMCOLORS='#bbbbbb #222222 #353535'
+export WMII_FOCUSCOLORS='#eeeeee #114455 #225577'
 export WMII_BACKGROUND='#000000'
 set -- $(echo $WMII_NORMCOLORS $WMII_FOCUSCOLORS)
 
