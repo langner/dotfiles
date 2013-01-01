@@ -1,39 +1,36 @@
 #!/bin/dash -f
 
-# Configure wmii
-wmiiscript=wmiirc # For wmii.sh
+wmiiscript=wmiirc
 . wmii.sh
 
-# Configuration Variables
 MODKEY=Control
 UP=Up
 DOWN=Down
 LEFT=Left
 RIGHT=Right
 
-# Bars
 noticetimeout=5
 noticebar=/rbar/!notice
 
-# Colors tuples: "<text> <background> <border>"
+# Colors are defined in tuples: <text> <background> <border>
 export WMII_NORMCOLORS='#000000 #c1c48b #81654f'
 export WMII_FOCUSCOLORS='#000000 #81654f #000000'
 export WMII_BACKGROUND='#000000'
-export WMII_FONT='fixed'
 set -- $(echo $WMII_NORMCOLORS $WMII_FOCUSCOLORS)
+
+export WMII_FONT='fixed'
 export WMII_TERM="x-terminal-emulator -bg black -fg grey"
 
-# Menu history
 hist="${WMII_CONFPATH%%:*}/history"
 histnum=5000
 
-# Column Rules
+# Default column rules for tiled windows.
 wmiir write /colrules <<!
-/gimp/ -> 17+83+41
 /.*/ -> 62+38 # Golden Ratio
 !
 
-# Tagging Rules
+# Tagging rules, which are mainly useful for defining progrms
+# that appear by default as floating windows.
 wmiir write /tagrules <<!
 /Culgi Graphics/ -> ~
 /Gimp/ -> ~
@@ -44,17 +41,30 @@ wmiir write /tagrules <<!
 /Skype/ -> ~
 !
 
-# Status Bar Info
-status() {
-	echo -n $(uptime | sed 's/.*://; s/,//g') '|' $(date)
+# Status bar info contains just the cpu/load/date by default.
+# Add additional wireless/battery info for laptops.
+if [ -e /sbin/iwconfig ]; then
+	STATUS_WIRELESS="\
+	$(/sbin/iwconfig wlan0 | grep ESSID | sed 's/.*ESSID:"//g; s/"\s*$//g') \
+	$(/sbin/iwconfig wlan0 | grep 'Link Quality' | sed 's/\s*Link Quality=//; s/\s.*//') |"
+fi
+if [ `acpi -b | awk '{ print $1 }'` = "Battery" ]; then
+	STATUS_BATTERY="\
+	$(acpi | sed 's/.*Battery .: //g; s/Discharging/-/g; s/Charging/+/g; s/Charged//g; s/Full//g; s/%.*/%/g; s/, //g') \
+	$(acpi | awk '{ print $5 }') |"
+fi
+status() { echo -n \
+	$STATUS_WIRELESS \
+	$STATUS_BATTERY \
+	$(uptime | sed 's/.*://; s/,//g') '|' $(date)
 }
-local_events() { true;}
+local_events() { true; }
 wi_runconf -s wmiirc_local
 echo $WMII_NORMCOLORS | wmiir create $noticebar
 
 # Event processing
 events() {
-	cat <<'!'
+	cat <<'!'	
 # Events
 Event CreateTag
 	echo "$WMII_NORMCOLORS" "$@" | wmiir create "/lbar/$@"
@@ -244,7 +254,7 @@ wmiir write /ctl <<!
 !
 xsetroot -solid "$WMII_BACKGROUND" &
 
-# Reload the last bg feh had set.
+# Reload the last background feh had set.
 eval `cat $HOME/.fehbg` &
 
 # Misc
@@ -266,10 +276,7 @@ do
 	fi | wmiir create "/lbar/$tag"
 done
 
-# Startup applications
 xcompmgr &
 
-# Event loop
 wi_eventloop
 
- 
