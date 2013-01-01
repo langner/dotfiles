@@ -44,19 +44,25 @@ wmiir write /tagrules <<!
 # Status bar info contains just the cpu/load/date by default.
 # Add additional wireless/battery info for laptops.
 if [ -e /sbin/iwconfig ]; then
-	STATUS_WIRELESS="\
+	STATUS_WIRELESS=" \
 	$(/sbin/iwconfig wlan0 | grep ESSID | sed 's/.*ESSID:"//g; s/"\s*$//g') \
-	$(/sbin/iwconfig wlan0 | grep 'Link Quality' | sed 's/\s*Link Quality=//; s/\s.*//') |"
+	$(/sbin/iwconfig wlan0 | grep 'Link Quality' | sed 's/\s*Link Quality=//; s/\s.*//') | "
 fi
 if [ `acpi -b | awk '{ print $1 }'` = "Battery" ]; then
-	STATUS_BATTERY="\
+	STATUS_BATTERY=" \
 	$(acpi | sed 's/.*Battery .: //g; s/Discharging/-/g; s/Charging/+/g; s/Charged//g; s/Full//g; s/%.*/%/g; s/, //g') \
-	$(acpi | awk '{ print $5 }') |"
+	$(acpi | awk '{ print $5 }') | "
 fi
+STATUS_CPU=$(cat /proc/cpuinfo | grep 'cpu MHz' | sed 's/.*: //g; s/\..*//g;' | paste -sd "/")
+STATUS_LOAD=$(cat /proc/loadavg | awk '{ print $1, $2, $3 }')
+STATUS_MEMFREE=$(echo $((`cat /proc/meminfo | grep ^MemFree | awk '{ print $2 }'` / 1024)))
+STATUS_MEMCACHED=$(echo $(( `cat /proc/meminfo | grep ^Cached | awk '{ print $2 }'` / 1024 )))
+STATUS_MEMTOTAL=$(echo $(( `cat /proc/meminfo | grep ^MemTotal | awk '{ print $2 }'` / 1024 )))
 status() { echo -n \
-	$STATUS_WIRELESS \
-	$STATUS_BATTERY \
-	$(uptime | sed 's/.*://; s/,//g') '|' $(date)
+	$STATUS_WIRELESS $STATUS_BATTERY \
+	$STATUS_CPU 'MHz |' $STATUS_LOAD '|' \
+	$STATUS_MEMFREE '+' $STATUS_MEMCACHED '/' $STATUS_MEMTOTAL 'MB |' \
+	$(date '+%H:%M:%S %a %-d %b %Y')
 }
 local_events() { true; }
 wi_runconf -s wmiirc_local
