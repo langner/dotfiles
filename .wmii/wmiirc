@@ -39,6 +39,7 @@ wmiir write /tagrules <<!
 /mplayer/ -> ~
 /Pidgin/ -> ~
 /Skype/ -> ~
+/surf/ -> ~
 !
 
 # Status bar info contains just the cpu/load/date by default.
