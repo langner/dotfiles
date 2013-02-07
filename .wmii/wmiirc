@@ -212,6 +212,12 @@ Key $MODKEY-Shift-Return # Launch a terminal
 	eval wmiir setsid $WMII_TERM &
 Key $MODKEY-Shift-g # File manager
 	eval wmiir setsid gentoo &
+
+if [ -e /usr/bin/gdmflexiserver ]; then
+Key $MODKEY-Shift-q
+	eval wmiir setsid gdmflexiserver --new
+fi
+
 #
 KeyGroup Changing settings
 Key $MODKEY-Shift-minus
