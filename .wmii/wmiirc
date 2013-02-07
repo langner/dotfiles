@@ -1,6 +1,7 @@
 #!/bin/dash -f
 
 wmiiscript=wmiirc
+
 . wmii.sh
 
 MODKEY=Control
@@ -24,13 +25,13 @@ export WMII_TERM="x-terminal-emulator -bg black -fg grey"
 hist="${WMII_CONFPATH%%:*}/history"
 histnum=5000
 
-# Default column rules for tiled windows.
+# Default column rules for tiled windows
 wmiir write /colrules <<!
 /.*/ -> 62+38 # Golden Ratio
 !
 
-# Tagging rules, which are mainly useful for defining progrms
-# that appear by default as floating windows.
+# Tagging rules, which are mainly useful for defining programs
+# that appear by default as floating windows
 wmiir write /tagrules <<!
 /Culgi Graphics/ -> ~
 /Gimp/ -> ~
@@ -42,8 +43,8 @@ wmiir write /tagrules <<!
 /surf/ -> ~
 !
 
-# Status bar info contains just the cpu/load/date by default.
-# Add additional wireless/battery info for laptops.
+# Status bar info contains just the cpu/load/date by default,
+# and additional wireless/battery info where available (laptops)
 status() {
 	if [ -e /sbin/iwconfig ]; then
 		STATUS_WIRELESS=" \
@@ -70,10 +71,13 @@ local_events() { true; }
 wi_runconf -s wmiirc_local
 echo $WMII_NORMCOLORS | wmiir create $noticebar
 
-# Event processing
+# ############################
+# Event definitions start here
+# ############################
+
 events() {
 	cat <<'!'	
-# Events
+
 Event CreateTag
 	echo "$WMII_NORMCOLORS" "$@" | wmiir create "/lbar/$@"
 Event DestroyTag
@@ -109,7 +113,6 @@ Event Notice
 	{ sleep $noticetimeout; wmiir xwrite $noticebar ' '; }&
 	xpid = $!
 
-# Menus
 Menu Client-3-Delete
 	wmiir xwrite /client/$1/ctl kill
 Menu Client-3-Kill
@@ -118,6 +121,7 @@ Menu Client-3-Fullscreen
 	wmiir xwrite /client/$1/ctl Fullscreen on
 Event ClientMouseDown
 	wi_fnmenu Client $2 $1 &
+
 Menu LBar-3-Delete
 	tag=$1; clients=$(wmiir read "/tag/$tag/index" | awk '/[^#]/{print $2}')
 	for c in $clients; do
@@ -138,7 +142,6 @@ Menu LBar-3-Delete
 Event LeftBarMouseDown
 	wi_fnmenu LBar "$@" &
 
-# Actions
 Action showkeys
 	echo "$KeysHelp" | xmessage -file - -fn ${WMII_FONT%%,*}
 Action quit
@@ -157,8 +160,6 @@ Action status
 		sleep 1
 	done
 
-# Key Bindings
-#
 KeyGroup Moving around
 Key $MODKEY-$LEFT   # Select the client to the left
 	wmiir xwrite /tag/sel/ctl select left
@@ -170,13 +171,13 @@ Key $MODKEY-$DOWN   # Select the client below
 	wmiir xwrite /tag/sel/ctl select down
 Key $MODKEY-space   # Toggle between floating and managed layers
 	wmiir xwrite /tag/sel/ctl select toggle
-#
+
 KeyGroup Moving through stacks
 Key $MODKEY-Prior    # Select the stack above
 	wmiir xwrite /tag/sel/ctl select up stack
 Key $MODKEY-Next  # Select the stack below
 	wmiir xwrite /tag/sel/ctl select down stack
-#
+
 KeyGroup Moving clients around
 Key $MODKEY-Shift-$LEFT   # Move selected client to the left
 	wmiir xwrite /tag/sel/ctl send sel left
@@ -188,13 +189,13 @@ Key $MODKEY-Shift-$DOWN   # Move selected client down
 	wmiir xwrite /tag/sel/ctl send sel down
 Key $MODKEY-Shift-space   # Toggle selected client between floating and managed layers
 	wmiir xwrite /tag/sel/ctl send sel toggle
-#
+
 KeyGroup Client actions
 Key $MODKEY-Shift-f # Toggle selected client's fullsceen state
 	wmiir xwrite /client/sel/ctl Fullscreen toggle
 Key $MODKEY-Shift-c # Close client
 	wmiir xwrite /client/sel/ctl kill
-#
+
 KeyGroup Changing column modes
 Key $MODKEY-Shift-d # Set column to default mode
 	wmiir xwrite /tag/sel/ctl colmode sel default-max
@@ -202,7 +203,7 @@ Key $MODKEY-Shift-s # Set column to stack mode
 	wmiir xwrite /tag/sel/ctl colmode sel stack-max
 Key $MODKEY-Shift-m # Set column to max mode
 	wmiir xwrite /tag/sel/ctl colmode sel stack+max
-#
+
 KeyGroup Running programs
 Key $MODKEY-Shift-a      # Open wmii actions menu
 	action $(wi_actions | wimenu -h "${hist}.actions" -n $histnum) &
@@ -213,12 +214,12 @@ Key $MODKEY-Shift-Return # Launch a terminal
 Key $MODKEY-Shift-g # File manager
 	eval wmiir setsid gentoo &
 
+KeyGroup Log out
 if [ -e /usr/bin/gdmflexiserver ]; then
 Key $MODKEY-Shift-q
 	eval wmiir setsid gdmflexiserver --new
 fi
 
-#
 KeyGroup Changing settings
 Key $MODKEY-Shift-minus
         eval wmiir setsid aumix -v-5 &
@@ -228,7 +229,7 @@ Key $MODKEY-Shift-bracketleft
         eval wmiir setsid transset-df -p --dec 0.05 &
 Key $MODKEY-Shift-bracketright
 	eval wmiir setsid transset-df -p --inc 0.05 &
-#
+
 KeyGroup Other
 Key $MODKEY-Shift-Alt-t # Toggle all other key bindings
 	case $(wmiir read /keys | wc -l | tr -d ' \t\n') in
@@ -239,26 +240,40 @@ Key $MODKEY-Shift-Alt-t # Toggle all other key bindings
 		wmiir xwrite /keys $MODKEY-Shift-Alt-t
 		wmiir xwrite /ctl grabmod Mod3;;
 	esac
-#
+
 KeyGroup Tag actions
 Key $MODKEY-Tab       # Change to another tag
 	(tag=$(wi_tags | wimenu -h "${hist}.tags" -n 50) && wmiir xwrite /ctl view $tag) &
 Key $MODKEY-Shift-Tab # Retag the selected client
 	c=$(wi_selclient)
 	(tag=$(wi_tags | wimenu -h "${hist}.tags" -n 50) && wmiir xwrite /client/$c/tags $tag) &
+
 !
-	for i in 0 1 2 3 4 5 6 7 8 9; do
-		cat <<!
+
+# Changing to any numbered view and moving clients around them
+# can be done in a loop like so for all ten digits.
+for i in 0 1 2 3 4 5 6 7 8 9; do cat <<!
 Key $MODKEY-$i		 # Move to the numbered view
 	wmiir xwrite /ctl view "$i"
 Key $MODKEY-Shift-$i     # Retag selected client with the numbered tag
 	wmiir xwrite /client/sel/tags "$i"
 !
-	done
+done
+
 }
+
+# ##########################
+# Event definitions end here
+# ##########################
+
 wi_events events local_events
 
-# WM Configuration
+progsfile="$(wmiir namespace)/.proglist"
+wi_proglist $PATH > $progsfile $
+
+action status &
+
+# Set up the window manager configuration now
 wmiir write /ctl <<!
 	font $WMII_FONT
 	focuscolors $WMII_FOCUSCOLORS
@@ -268,15 +283,7 @@ wmiir write /ctl <<!
 !
 xsetroot -solid "$WMII_BACKGROUND" &
 
-# Reload the last background feh had set.
-eval `cat $HOME/.fehbg` &
-
-# Misc
-progsfile="$(wmiir namespace)/.proglist"
-action status &
-wi_proglist $PATH >$progsfile &
-
-# Setup Tag Bar
+# Set up the tag bar now
 IFS="$wi_newline"
 wmiir rm $(wmiir ls /lbar | sed 's,^,/lbar/,') >/dev/null
 seltag=$(wmiir read /tag/sel/ctl | sed 1q)
@@ -290,7 +297,10 @@ do
 	fi | wmiir create "/lbar/$tag"
 done
 
+# Reload previous background that had been set by feh
+eval `cat $HOME/.fehbg` 
+
+# Autostart the compositing manager
 xcompmgr &
 
 wi_eventloop
-
