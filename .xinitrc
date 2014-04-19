@@ -1,1 +1,2 @@
-exec wmii
+[ -f ~/.xprofile ] && source ~/.xprofile ]
+exec i3
