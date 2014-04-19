@@ -1,0 +1,16 @@
+.bash_history
+.bash_private
+.fehbg
+.gitconfig
+.its
+.mozilla
+.mutt
+.pythonhist
+.ssh
+.thumbnails
+.xprofile
+
+.dropbox*
+
+.surf/cookies*
+.wmii/history*
