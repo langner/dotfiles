@@ -1,4 +1,5 @@
 # Mount a directory on a remote machine.
+#!/bin/bash
 
 # First argument is the target machine.
 target=$1
@@ -15,9 +16,22 @@ if [ ! -f $3 ]; then
 	user=$3
 fi
 
-# Create the local mount point.
+# The command to use and remote location can be target-dependent.
+if [ $target == kindle ]; then
+	cmd=mtpfs
+	remote=""
+else
+	cmd=sshfs
+	remote=${user}@${target}:${remote}
+fi
+
+# The local location should be pretty easy, and we want to make
+# sure that it exists.
+local=~/mnt/$target
 mkdir -p ~/mnt/$target
 
+# Options we would like to use.
+opts="-o allow_root -o uid=`id -u` -o gid=`id -g`"
+
 # Now perform the actual mount.
-OPTS="-o allow_root -o uid=`id -u` -o gid=`id -g`"
-sshfs $OPTS ${user}@${target}:${remote} ~/mnt/$target
+$cmd $opts $remote $local
