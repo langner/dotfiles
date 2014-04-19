@@ -500,15 +500,15 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"edit_oowriter"</name>
+   <name>"view_zip"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"oowriter {Fup}"</def>
+     <def>"unzip -v {fup}"</def>
      <flags>0</flags>
      <CX_External>
-      <gflags>9</gflags>
+      <gflags>4</gflags>
       <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
@@ -527,22 +527,6 @@
       <gflags>0</gflags>
       <bflags>0</bflags>
       <aflags>1</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_zip"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"unzip -v {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>4</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
      </CX_External>
     </CmdRow>
    </CmdRows>
@@ -692,6 +676,22 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
+   <name>"edit_abiword"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"abiword {Fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>9</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
    <name>"uncompress_tar_bzip2"</name>
    <flags>0</flags>
    <CmdRows>
@@ -703,22 +703,6 @@
       <gflags>0</gflags>
       <bflags>8</bflags>
       <aflags>2</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_tar_bzip2"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"tar -tvf {fpu} --use-compress-prog=bunzip2"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>4</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
      </CX_External>
     </CmdRow>
    </CmdRows>
@@ -740,12 +724,12 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"view_gzip"</name>
+   <name>"view_tar_bzip2"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"zcat {fup}"</def>
+     <def>"tar -tvf {fpu} --use-compress-prog=bunzip2"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>4</gflags>
@@ -762,6 +746,22 @@
     <CmdRow>
      <type>"External"</type>
      <def>"rpm -SOME_SMART_OPTION {fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>4</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"view_gzip"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"zcat {fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>4</gflags>
@@ -804,22 +804,6 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"edit_abiword"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"abiword {Fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
    <name>"diff"</name>
    <flags>0</flags>
    <CmdRows>
@@ -830,6 +814,22 @@
      <CX_External>
       <gflags>4</gflags>
       <bflags>16</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"edit_lowriter"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"lowriter {Fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>9</gflags>
+      <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
     </CmdRow>
@@ -1711,7 +1711,7 @@
    <Properties>
     <Property>
      <name>"OpenOffice"</name>
-     <action>"edit_oowriter"</action>
+     <action>"edit_lowriter"</action>
     </Property>
     <Property>
      <name>"uIcon"</name>
@@ -1776,7 +1776,7 @@
    <Properties>
     <Property>
      <name>"View"</name>
-     <action>"edit_oowriter"</action>
+     <action>"edit_lowriter"</action>
     </Property>
     <Property>
      <name>"uIcon"</name>
@@ -1791,7 +1791,7 @@
    <Properties>
     <Property>
      <name>"View"</name>
-     <action>"edit_oocalc"</action>
+     <action>"edit_localc"</action>
     </Property>
    </Properties>
   </Style>
@@ -1802,7 +1802,7 @@
    <Properties>
     <Property>
      <name>"Default"</name>
-     <action>"edit_oowriter"</action>
+     <action>"edit_lowriter"</action>
     </Property>
     <Property>
      <name>"uIcon"</name>
@@ -2113,6 +2113,10 @@
      <action>"edit_gnumeric"</action>
     </Property>
     <Property>
+     <name>"Calc"</name>
+     <action>"localc {Fup}"</action>
+    </Property>
+    <Property>
      <name>"uIcon"</name>
      <icon>"Spreadsheet.xpm"</icon>
     </Property>
@@ -2138,14 +2142,6 @@
    <parent>"Spreadsheet"</parent>
    <expand>TRUE</expand>
    <Properties>
-    <Property>
-     <name>"Gnumeric"</name>
-     <action>"edit_gnumeric"</action>
-    </Property>
-    <Property>
-     <name>"Default"</name>
-     <action>""</action>
-    </Property>
     <Property>
      <name>"uIcon"</name>
      <icon>"GnomeCalc.xpm"</icon>
