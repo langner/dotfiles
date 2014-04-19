@@ -27,3 +27,4 @@ echo "Synchronizing with $SERVER ..."
 OPTIONS="--verbose --progress --stats --human-readable --archive --compress --update --delete"
 rsync $OPTIONS $SYNC_EXCLUDE --rsh="$SSH -i $SYNC_KEY" $SYNC_LOCAL/* $USER@$SERVER:$SYNC_REMOTE
 
+date
