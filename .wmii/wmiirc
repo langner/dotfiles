@@ -215,7 +215,10 @@ Key $MODKEY-Shift-g # File manager
 	eval wmiir setsid gentoo &
 
 KeyGroup Log out
-if [ -e /usr/bin/gdmflexiserver ]; then
+if [ -e /usr/bin/dm-tool ]; then
+Key $MODKEY-Shift-q
+        eval wmiir setsid dm-tool switch-to-rgeeter
+elif [ -e /usr/bin/gdmflexiserver ]; then
 Key $MODKEY-Shift-q
 	eval wmiir setsid gdmflexiserver --new
 fi
