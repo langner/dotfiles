@@ -57,7 +57,6 @@ style "theme-default"
 
   engine "murrine" 
   {
-        scrollbar_color = "#654545"
         contrast = 1.0
         glazestyle = 1 # 0 = flat hilight, 1 = curved hilight, 2 = concave style
         menubarstyle = 0 # 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
@@ -68,7 +67,6 @@ style "theme-default"
         animation = TRUE # FALSE = disabled, TRUE = enabled
         scrollbarstyle = 1
         menustyle = 1
-        gradients = FALSE
         listviewstyle = 1
   }
 }
