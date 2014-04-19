@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
 
 <GentooConfig>
- <version>"0.15.3"</version>
+ <version>"0.15.5"</version>
  <DirPanes>
   <count>2</count>
   <DirPaneLeft>
@@ -793,7 +793,7 @@
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"gmplayer {fup}"</def>
+     <def>"mplayer {fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>9</gflags>
@@ -1268,22 +1268,6 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"edit_ooimpress"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"ooimpress {Fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
    <name>"diff_kdiff3"</name>
    <flags>0</flags>
    <CmdRows>
@@ -1312,6 +1296,22 @@
      <type>"Built-In"</type>
      <def>"DirEnter dir={fpu}"</def>
      <flags>0</flags>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"edit_localc"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"localc {fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>9</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
     </CmdRow>
    </CmdRows>
   </CmdSeq>
@@ -1380,6 +1380,22 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
+   <name>"edit_loimpress"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"loimpress {Fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>9</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
    <name>"play_sid"</name>
    <flags>0</flags>
    <CmdRows>
@@ -1389,22 +1405,6 @@
      <flags>0</flags>
      <CX_External>
       <gflags>1</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"edit_oocalc"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"oocalc {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
       <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
@@ -1465,6 +1465,7 @@
    <use_mmap>TRUE</use_mmap>
    <buf_size>u1048576</buf_size>
    <check_size>u512</check_size>
+   <exit_left>TRUE</exit_left>
   </ViewText>
  </CommandConfig>
  <FileStyles>
@@ -1823,16 +1824,16 @@
      <color>C8080,0000,3333</color>
     </Property>
     <Property>
-     <name>"View"</name>
-     <action>"view_image"</action>
-    </Property>
-    <Property>
      <name>"uIcon"</name>
      <icon>"image.png"</icon>
     </Property>
     <Property>
      <name>"Edit"</name>
      <action>"edit_image"</action>
+    </Property>
+    <Property>
+     <name>"View"</name>
+     <action>"view_image"</action>
     </Property>
    </Properties>
   </Style>
@@ -1938,7 +1939,7 @@
   <Style>
    <name>"Presentation"</name>
    <parent>"Data"</parent>
-   <expand>FALSE</expand>
+   <expand>TRUE</expand>
    <Properties>
     <Property>
      <name>"uIcon"</name>
@@ -1946,7 +1947,7 @@
     </Property>
     <Property>
      <name>"Impress"</name>
-     <action>"edit_ooimpress"</action>
+     <action>"edit_loimpress"</action>
     </Property>
    </Properties>
   </Style>
@@ -1991,16 +1992,16 @@
    <expand>TRUE</expand>
    <Properties>
     <Property>
-     <name>"uIcon"</name>
-     <icon>"Speaker2.xpm"</icon>
-    </Property>
-    <Property>
      <name>"View"</name>
      <action>"Play"</action>
     </Property>
     <Property>
      <name>"Play"</name>
      <action>"play_music_mplayer"</action>
+    </Property>
+    <Property>
+     <name>"uIcon"</name>
+     <icon>"Speaker2.xpm"</icon>
     </Property>
    </Properties>
   </Style>
@@ -2105,7 +2106,7 @@
   <Style>
    <name>"Spreadsheet"</name>
    <parent>"Data"</parent>
-   <expand>FALSE</expand>
+   <expand>TRUE</expand>
    <Properties>
     <Property>
      <name>"Gnumeric"</name>
@@ -2157,8 +2158,8 @@
    <expand>TRUE</expand>
    <Properties>
     <Property>
-     <name>"View"</name>
-     <action>"ViewText"</action>
+     <name>"uIcon"</name>
+     <icon>"txt.xpm"</icon>
     </Property>
     <Property>
      <name>"uFG"</name>
@@ -2169,12 +2170,12 @@
      <action>"edit_text_gedit"</action>
     </Property>
     <Property>
-     <name>"uIcon"</name>
-     <icon>"txt.xpm"</icon>
-    </Property>
-    <Property>
      <name>"Edit"</name>
      <action>"edit_text_kwrite"</action>
+    </Property>
+    <Property>
+     <name>"View"</name>
+     <action>"ViewText"</action>
     </Property>
    </Properties>
   </Style>
@@ -3517,6 +3518,17 @@
        </BFaces>
        <tooltip>"This uses command arguments to &quot;fake&quot; the SelectRE command"</tooltip>
        <flags>u2</flags>
+      </Button>
+      <Button>
+       <pos>u6</pos>
+       <BFaces>
+	<BFace>
+	 <face>u0</face>
+	 <label>"diff"</label>
+	 <cmdseq>"diff_kdiff3"</cmdseq>
+	</BFace>
+       </BFaces>
+       <flags>u0</flags>
       </Button>
       <Button>
        <pos>u7</pos>
