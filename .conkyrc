@@ -98,5 +98,7 @@ ${offset 10}${upspeedgraph wlan0 30,150 000055 0000ff} ${color lightgrey}${offse
 ${offset 10}up: ${color }${upspeed wlan0}${offset 10}${alignr 85}down: ${color }${downspeed wlan0}
 ${endif}
 
+${if_running mpd}
 ${offset 10}${color slate grey}mpd: ${color }${mpd_status}${if_mpd_playing} (${mpd_percent}%)${endif}
 ${if_mpd_playing}${offset 10}${font Bitstream Vera Sans:size=8$}${mpd_smart 65}...${font }${endif}
+${endif}
