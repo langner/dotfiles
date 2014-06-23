@@ -72,5 +72,8 @@ export EDITOR="nano"
 # Stuff to do when starting Python.
 export PYTHONSTARTUP=~/.pythonrc
 
+# Personal TeX resources will be here.
+export TEXMFHOME=~/.texmf-var
+
 # Include private settings if it exists.
 [[ -r ~/.bash_private ]] && . ~/.bash_private
