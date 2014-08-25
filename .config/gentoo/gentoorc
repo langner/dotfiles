@@ -244,8 +244,8 @@
   </DirPaneRight>
   <DirPanePaning>
    <orientation>"horizontal"</orientation>
-   <mode>"free"</mode>
-   <value>0.232443</value>
+   <mode>"ratio"</mode>
+   <value>0.500000</value>
   </DirPanePaning>
   <DirPaneHistory>
    <select>TRUE</select>
@@ -621,12 +621,12 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"view_mol_avogadro"</name>
+   <name>"view_video_mplayer"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"avogadro {Fup}"</def>
+     <def>"mplayer {fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>9</gflags>
@@ -637,28 +637,12 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"view_deb"</name>
+   <name>"view_mol_avogadro"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"dpkg-deb -c {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>4</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"edit_abiword"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"abiword {Fup}"</def>
+     <def>"avogadro {Fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>9</gflags>
@@ -685,6 +669,22 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
+   <name>"view_tar_bzip2"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"tar -tvf {fpu} --use-compress-prog=bunzip2"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>4</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
    <name>"compress_bzip"</name>
    <flags>0</flags>
    <CmdRows>
@@ -701,12 +701,12 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"view_tar_bzip2"</name>
+   <name>"view_gzip"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"tar -tvf {fpu} --use-compress-prog=bunzip2"</def>
+     <def>"zcat {fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>4</gflags>
@@ -733,12 +733,12 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"view_gzip"</name>
+   <name>"view_deb"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"zcat {fup}"</def>
+     <def>"dpkg-deb -c {fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>4</gflags>
@@ -765,12 +765,12 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"view_video_mplayer"</name>
+   <name>"edit_abiword"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"mplayer {fup}"</def>
+     <def>"abiword {Fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>9</gflags>
@@ -813,22 +813,6 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"play_music_mplayer"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"xterm -e mplayer {Fpu}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
    <name>"view_rar"</name>
    <flags>0</flags>
    <CmdRows>
@@ -838,6 +822,22 @@
      <flags>0</flags>
      <CX_External>
       <gflags>4</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"play_music_mplayer"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"xterm -e mplayer {Fpu}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>9</gflags>
       <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
@@ -1181,22 +1181,6 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"test_pipe"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"bash -c &apos;echo {Fup} | wc&apos;"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>4</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
    <name>"test_input"</name>
    <flags>0</flags>
    <CmdRows>
@@ -1206,6 +1190,22 @@
      <flags>0</flags>
      <CX_External>
       <gflags>0</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"test_pipe"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"bash -c &apos;echo {Fup} | wc&apos;"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>4</gflags>
       <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
@@ -1803,16 +1803,16 @@
      <color>C8080,0000,3333</color>
     </Property>
     <Property>
+     <name>"uIcon"</name>
+     <icon>"image.png"</icon>
+    </Property>
+    <Property>
      <name>"Edit"</name>
      <action>"edit_image"</action>
     </Property>
     <Property>
      <name>"View"</name>
      <action>"view_image"</action>
-    </Property>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"image.png"</icon>
     </Property>
    </Properties>
   </Style>
@@ -1971,16 +1971,16 @@
    <expand>TRUE</expand>
    <Properties>
     <Property>
+     <name>"View"</name>
+     <action>"Play"</action>
+    </Property>
+    <Property>
      <name>"Play"</name>
      <action>"play_music_mplayer"</action>
     </Property>
     <Property>
      <name>"uIcon"</name>
      <icon>"Speaker2.xpm"</icon>
-    </Property>
-    <Property>
-     <name>"View"</name>
-     <action>"Play"</action>
     </Property>
    </Properties>
   </Style>
@@ -2133,8 +2133,8 @@
    <expand>TRUE</expand>
    <Properties>
     <Property>
-     <name>"Edit"</name>
-     <action>"edit_text_kwrite"</action>
+     <name>"uIcon"</name>
+     <icon>"txt.xpm"</icon>
     </Property>
     <Property>
      <name>"uFG"</name>
@@ -2145,12 +2145,12 @@
      <action>"edit_text_gedit"</action>
     </Property>
     <Property>
-     <name>"View"</name>
-     <action>"ViewText"</action>
+     <name>"Edit"</name>
+     <action>"edit_text_kwrite"</action>
     </Property>
     <Property>
-     <name>"uIcon"</name>
-     <icon>"txt.xpm"</icon>
+     <name>"View"</name>
+     <action>"ViewText"</action>
     </Property>
    </Properties>
   </Style>
