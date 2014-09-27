@@ -79,6 +79,8 @@ ${offset 10}${color slate grey}/: ${color }${fs_used /}${alignr 50}${fs_size /}
 ${offset 10}${fs_bar 3,350 /}
 ${offset 10}${color slate grey}/home: ${color }${fs_used /home}${alignr 50}${fs_size /home}
 ${offset 10}${fs_bar 3,350 /home}
+${if_mounted /usr/local}${offset 10}${color slate grey}/usr/local: ${color }${fs_used /usr/local}${alignr 50}${fs_size /usr/local}
+${offset 10}${fs_bar 3,350 /usr/local}${endif}
 ${if_mounted /mnt/tb3}${offset 10}${color slate grey}/mnt/tb3: ${color }${fs_used /mnt/tb3}${alignr 50}${fs_size /mnt/tb3}
 ${offset 10}${fs_bar 3,350 /mnt/tb3}${endif}
 
@@ -96,5 +98,7 @@ ${offset 10}${upspeedgraph wlan0 30,150 000055 0000ff} ${color lightgrey}${offse
 ${offset 10}up: ${color }${upspeed wlan0}${offset 10}${alignr 85}down: ${color }${downspeed wlan0}
 ${endif}
 
+${if_running mpd}
 ${offset 10}${color slate grey}mpd: ${color }${mpd_status}${if_mpd_playing} (${mpd_percent}%)${endif}
 ${if_mpd_playing}${offset 10}${font Bitstream Vera Sans:size=8$}${mpd_smart 65}...${font }${endif}
+${endif}
