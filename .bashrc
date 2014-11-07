@@ -75,5 +75,5 @@ export PYTHONSTARTUP=~/.pythonrc
 # Personal TeX resources will be here.
 export TEXMFHOME=~/.texmf-var
 
-# Include private settings if it exists.
+# Include private settings if the file exists.
 [[ -r ~/.bash_private ]] && . ~/.bash_private

@@ -2864,7 +2864,7 @@
   <FileType>
    <name>"Text, MS Word"</name>
    <mode>32768</mode>
-   <suffix>".doc"</suffix>
+   <suffix>"^.doc[x]?$"</suffix>
    <style>"MS Word"</style>
   </FileType>
   <FileType>
@@ -3055,7 +3055,7 @@
    <style>"Excel"</style>
   </FileType>
   <FileType>
-   <name>""</name>
+   <name>"Spreadsheet, OpenOffice"</name>
    <mode>32768</mode>
    <suffix>".odp"</suffix>
    <style>"Impress"</style>
