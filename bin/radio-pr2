@@ -1,1 +1,1 @@
-mplayer -cache 128 -loop 0 http://stream.polskieradio.pl/program2
+mplayer -cache 256 -loop 0 http://stream.polskieradio.pl/program2
