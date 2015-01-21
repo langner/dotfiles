@@ -1,1 +1,1 @@
-mplayer http://stream4.nadaje.com:9222/ram.ogg
+mplayer -cache 256 http://stream4.nadaje.com:9222/ram.ogg
