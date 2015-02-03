@@ -101,7 +101,7 @@ mode "resize" {
     bindsym k resize shrink down 10 px or 10 ppt
     bindsym Shift+K resize grow   down 10 px or 10 ppt
     bindsym l resize shrink up 10 px or 10 ppt
-    bind sym Shift+L resize grow   up 10 px or 10 ppt
+    bindsym Shift+L resize grow   up 10 px or 10 ppt
     bindsym semicolon resize shrink right 10 px or 10 ppt
     bindsym Shift+colon resize grow   right 10 px or 10 ppt
 
