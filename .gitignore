@@ -14,3 +14,9 @@
 
 .surf/cookies*
 .wmii/history*
+
+/backup*
+/data
+/music
+/public*
+/tmp*
