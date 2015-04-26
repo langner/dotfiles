@@ -286,22 +286,6 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"edit_kile"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"kile {Fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
    <name>"new_shell"</name>
    <flags>0</flags>
    <CmdRows>
@@ -345,22 +329,6 @@
       <gflags>0</gflags>
       <bflags>0</bflags>
       <aflags>1</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"play_mod"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"xmp {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>3</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
      </CX_External>
     </CmdRow>
    </CmdRows>
@@ -518,22 +486,6 @@
      <flags>0</flags>
      <CX_External>
       <gflags>1</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"edit_text_kwrite"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"kwrite {Fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
       <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
@@ -760,6 +712,22 @@
       <gflags>0</gflags>
       <bflags>0</bflags>
       <aflags>3</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"edit_gimp"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"gimp {fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>3</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
      </CX_External>
     </CmdRow>
    </CmdRows>
@@ -1133,15 +1101,15 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"view_pdf_acroread"</name>
+   <name>"play_sample"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"acroread {fup}"</def>
+     <def>"aplay {fup}"</def>
      <flags>0</flags>
      <CX_External>
-      <gflags>1</gflags>
+      <gflags>0</gflags>
       <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
@@ -1149,12 +1117,12 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"play_sample"</name>
+   <name>"edit_text_gvim"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"aplay {fup}"</def>
+     <def>"gvim {Fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>0</gflags>
@@ -1222,22 +1190,6 @@
      <flags>0</flags>
      <CX_External>
       <gflags>0</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"edit_image"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"gimp {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>3</gflags>
       <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
@@ -1366,22 +1318,6 @@
      <flags>0</flags>
      <CX_External>
       <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"play_sid"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"sidplay {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>1</gflags>
       <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
@@ -1803,16 +1739,16 @@
      <color>C8080,0000,3333</color>
     </Property>
     <Property>
+     <name>"View"</name>
+     <action>"view_image"</action>
+    </Property>
+    <Property>
      <name>"uIcon"</name>
      <icon>"image.png"</icon>
     </Property>
     <Property>
      <name>"Edit"</name>
      <action>"edit_image"</action>
-    </Property>
-    <Property>
-     <name>"View"</name>
-     <action>"view_image"</action>
     </Property>
    </Properties>
   </Style>
@@ -1971,16 +1907,16 @@
    <expand>TRUE</expand>
    <Properties>
     <Property>
+     <name>"uIcon"</name>
+     <icon>"Speaker2.xpm"</icon>
+    </Property>
+    <Property>
      <name>"View"</name>
      <action>"Play"</action>
     </Property>
     <Property>
      <name>"Play"</name>
      <action>"play_music_mplayer"</action>
-    </Property>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"Speaker2.xpm"</icon>
     </Property>
    </Properties>
   </Style>
@@ -2133,8 +2069,8 @@
    <expand>TRUE</expand>
    <Properties>
     <Property>
-     <name>"uIcon"</name>
-     <icon>"txt.xpm"</icon>
+     <name>"View"</name>
+     <action>"ViewText"</action>
     </Property>
     <Property>
      <name>"uFG"</name>
@@ -2145,12 +2081,12 @@
      <action>"edit_text_gedit"</action>
     </Property>
     <Property>
-     <name>"Edit"</name>
-     <action>"edit_text_kwrite"</action>
+     <name>"uIcon"</name>
+     <icon>"txt.xpm"</icon>
     </Property>
     <Property>
-     <name>"View"</name>
-     <action>"ViewText"</action>
+     <name>"Edit"</name>
+     <action>"edit_text_kwrite"</action>
     </Property>
    </Properties>
   </Style>
