@@ -1,13 +1,27 @@
 # If not running interactively, don't do anything.
 [ -z "$PS1" ] && return
 
-# Don't put duplicate lines in the history. See bash(1) for more options.
+# More possible paths with executables.
+export PATH=/opt/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH=$HOME/bin:$PATH
+
+# Paths with extra libraries.
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+
+# Some programs look for a default editor.
+export EDITOR="nano"
+
+# Stuff to do when starting Python.
+export PYTHONSTARTUP=~/.pythonrc
+
+# Personal TeX resources will be here.
+export TEXMFHOME=~/.texmf-var
+
+# Increase history, and don't put duplicate lines in the history. See bash(1) for more options.
 export HISTCONTROL=ignoredups
 export HISTSIZE=55000
 export HISTFILESIZE=99000
-
-# Split output only by newlines.
-#export IFS=$'\n'
 
 # Check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -16,6 +30,14 @@ shopt -s checkwinsize
 # Make less more friendly for non-text input files.
 # See lesspipe(1) for details.
 [ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
+
+# Support more colors in the terminal if possible. Not the question mark
+# there, since Ubuntu will use a plus instead of a dash in terminfo.
+if [ -e /usr/share/terminfo/x/xterm?256color ]; then
+    export TERM='xterm-256color'
+else
+    export TERM='xterm-color'
+fi
 
 # Set variable identifying the chroot you work in (used in the prompt below).
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
@@ -57,23 +79,6 @@ alias lsla='ls -lha'
 alias cpf='cp -rvf'
 alias mvf='mv -vf'
 alias rmf='rm -rvf'
-
-# Paths with executables.
-export PATH=/opt/bin:$PATH
-export PATH=/usr/local/bin:$PATH
-export PATH=$HOME/bin:$PATH
-
-# Paths with extra libraries.
-export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-
-# Some programs look for a default editor.
-export EDITOR="nano"
-
-# Stuff to do when starting Python.
-export PYTHONSTARTUP=~/.pythonrc
-
-# Personal TeX resources will be here.
-export TEXMFHOME=~/.texmf-var
 
 # Include private settings if the file exists.
 [[ -r ~/.bash_private ]] && . ~/.bash_private
