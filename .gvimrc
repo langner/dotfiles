@@ -18,5 +18,3 @@ colorscheme desert
 if filereadable("/etc/vim/gvimrc.local")
   source /etc/vim/gvimrc.local
 endif
-
-toolbar=none
