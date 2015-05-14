@@ -58,3 +58,8 @@ set guioptions-=T
 " Setup dictionary completions
 :set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 :set complete+=k
+
+" Indentation without hard tabs
+:set expandtab
+:set shiftwidth=4
+:set softtabstop=4
