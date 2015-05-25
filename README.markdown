@@ -13,6 +13,6 @@ git status
 
 After resolving any conflicts and possibly adding and pushing new files, I usually also ignore some files:
 ```
-git --update-index --assume-unchanged README* LICENSE
+git update-index --assume-unchanged README* LICENSE
 rm -rvf README* LICENSE
 ```
