@@ -1,5 +1,6 @@
-.bash_history
-.bash_private
+.aptitude
+.bash_aliases
+.cache
 .fehbg
 .gitconfig
 .its
@@ -20,3 +21,12 @@
 /music
 /public*
 /tmp*
+
+*authority
+*bak
+*errors
+*hist
+*history
+*hst
+*old
+*private

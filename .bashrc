@@ -1,5 +1,9 @@
 # If not running interactively, don't do anything.
 [ -z "$PS1" ] && return
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
 # More possible paths with executables.
 export PATH=/opt/bin:$PATH
@@ -23,13 +27,16 @@ export HISTCONTROL=ignoredups
 export HISTSIZE=55000
 export HISTFILESIZE=99000
 
+# Append to the history file, don't overwrite it.
+shopt -s histappend
+
 # Check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
 # Make less more friendly for non-text input files.
 # See lesspipe(1) for details.
-[ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # Support more colors in the terminal if possible. Not the question mark
 # there, since Ubuntu will use a plus instead of a dash in terminfo.
@@ -40,7 +47,7 @@ else
 fi
 
 # Set variable identifying the chroot you work in (used in the prompt below).
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
@@ -56,10 +63,12 @@ xterm*|rxvt*)
     ;;
 esac
 
-# Enable color support of ls and also add handy aliases.
+# Enable color support, add color-enabled alias for ls, and define more colors.
 if [ "$TERM" != "dumb" ]; then
-    eval "`dircolors -b`"
-    alias l='ls --color=yes'
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+    alias egrep='ls --color=auto'
     export LS_COLORS="no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tbz=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.xz=01;31:*.deb=01;31:*.rpm=01;31:*.jpg=01;35:*.png=01;35:*.gif=01;35:*.bmp=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.png=01;35:*.mpg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.mp4=01;35:"
 fi
 
@@ -79,6 +88,9 @@ alias lsla='ls -lha'
 alias cpf='cp -rvf'
 alias mvf='mv -vf'
 alias rmf='rm -rvf'
+
+# Include any additional alias definitions.
+[[ -r ~/.bash_aliases ]] && . ~/.bash_aliases
 
 # Include private settings if the file exists.
 [[ -r ~/.bash_private ]] && . ~/.bash_private
