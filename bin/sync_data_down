@@ -25,6 +25,6 @@ die() {
 # The actual synchronization
 echo "Synchronizing with $SERVER ..."
 OPTIONS="--verbose --progress --stats --human-readable --archive --compress --update --delete"
-rsync $OPTIONS $SYNC_EXCLUDE --rsh="$SSH -i $SYNC_KEY" $USER@$SERVER:$SYNC_REMOTE/* $SYNC_LOCAL
+rsync $OPTIONS $SYNC_EXCLUDE --rsh="$SSH -i $SYNC_KEY" $SERVER:$SYNC_REMOTE/* $SYNC_LOCAL
 
 date
