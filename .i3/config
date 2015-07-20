@@ -15,6 +15,8 @@ bindsym $mod+Shift+C reload
 bindsym $mod+Shift+R restart
 # Exit i3 (logs you out of your X session)
 bindsym $mod+Shift+E exit
+# Lock the screen
+bindsym $mod+Shift+L exec "i3lock -c 000000"
 
 # Switch to another user (when GDM is used)
 bindsym $mod+Shift+U exec gdmflexiserver --new
@@ -53,10 +55,6 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # Move a focused window
-bindsym $mod+Shift+J move left
-bindsym $mod+Shift+K move down
-bindsym $mod+Shift+L move up
-bindsym $mod+Shift+colon move right
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -145,8 +143,7 @@ for_window [title="Figure 3"] floating enable
 # Images shown by imagemagick's display program
 for_window [instance="display"] floating enable
 
-# Monitor setup, background image, compositor and no timeout.
-exec_always --no-startup-id source ~/.xprofile
+# Background image, compositor and no timeout.
 exec_always --no-startup-id sh ~/.fehbg
 exec_always --no-startup-id xcompmgr &
 exec_always --no-startup-id xset s 0 0

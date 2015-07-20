@@ -79,6 +79,7 @@ alias rm='rm -riv'
 
 # Other common aliases I use.
 alias ds='du -h --max-depth=1'
+alias l='ls'
 alias la='l -a'
 alias ll='l -lh'
 alias lla='l -lha'
