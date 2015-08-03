@@ -3,6 +3,9 @@
 # Disable audible bell
 xset -b
 
+# Standby/suspend after 10 minutes
+xset dpms 600
+
 # Background color
 xsetroot -solid "#333333"
 
