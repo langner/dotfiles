@@ -1,3 +1,13 @@
+field tags = Tags, list
+field birthday = Birthday, date
+
+view CONTACT = name, email, tags
+view ADDRESS = address, address2, city, state, zip, country
+view PHONE = mobile, phone, workphone, fax
+view OTHER = url, birthday, notes
+
 set address_style = eu
-set index_format = "{name:44} {email:33} {phone:22|workphone|mobile} {notes}"
-set sort_field = notes
+set index_format = "{name:44} {email:33} {phone:22|workphone|mobile} {tags}"
+set sort_field = tags
+
+set www_command = "surf"
