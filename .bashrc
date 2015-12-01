@@ -77,7 +77,7 @@ alias cp='cp -riv'
 alias ms='mv -iv'
 alias rm='rm -riv'
 
-# Other common aliases I use.
+# Other useful aliases.
 alias ds='du -h --max-depth=1'
 alias l='ls'
 alias la='l -a'
@@ -89,6 +89,12 @@ alias lsla='ls -lha'
 alias cpf='cp -rvf'
 alias mvf='mv -vf'
 alias rmf='rm -rvf'
+
+# Catching the Nth line from a stream.
+get_line_row() {
+  sed "${1}q;d" | awk "{ print $ $2 }"
+}
+alias glr=get_line_row
 
 # Include any additional alias definitions.
 [[ -r ~/.bash_aliases ]] && . ~/.bash_aliases
