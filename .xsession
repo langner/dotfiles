@@ -14,5 +14,3 @@ urxvtd -q -f -o
 
 [ -f ~/.xprofile ] && source ~/.xprofile ]
 [ -f ~/.xsession_private ] && source ~/.xsession_private ]
-
-exec i3
