@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="yes"?>
 
 <GentooConfig>
- <version>"0.19.13"</version>
+ <version>"0.20.6"</version>
  <DirPanes>
   <count>2</count>
   <DirPaneLeft>
-   <columns>10</columns>
+   <columns>7</columns>
    <DPColumn>
     <index>0</index>
     <title>"I"</title>
@@ -13,7 +13,7 @@
     <DPExtra>
     </DPExtra>
     <justification>2</justification>
-    <width>17</width>
+    <width>36</width>
    </DPColumn>
    <DPColumn>
     <index>1</index>
@@ -24,88 +24,58 @@
      <show_linkname>TRUE</show_linkname>
     </DPExtra>
     <justification>0</justification>
-    <width>381</width>
+    <width>250</width>
    </DPColumn>
    <DPColumn>
     <index>2</index>
     <title>"Size"</title>
     <content>"size"</content>
     <DPExtra>
-     <unit>"smart"</unit>
+     <unit>"bytesnounit"</unit>
      <ticks>TRUE</ticks>
      <tick>","</tick>
-     <digits>1</digits>
+     <digits>3</digits>
      <dir_fs>TRUE</dir_fs>
     </DPExtra>
     <justification>1</justification>
-    <width>72</width>
+    <width>100</width>
    </DPColumn>
    <DPColumn>
     <index>3</index>
-    <title>"Mode"</title>
-    <content>"modenum"</content>
-    <DPExtra>
-     <numformat>"%o"</numformat>
-    </DPExtra>
-    <justification>1</justification>
-    <width>57</width>
-   </DPColumn>
-   <DPColumn>
-    <index>4</index>
     <title>"Mode2"</title>
     <content>"modestr"</content>
     <DPExtra>
     </DPExtra>
     <justification>2</justification>
-    <width>96</width>
+    <width>68</width>
    </DPColumn>
    <DPColumn>
-    <index>5</index>
-    <title>"Nlink"</title>
-    <content>"nlink"</content>
-    <DPExtra>
-     <numformat>"%d"</numformat>
-    </DPExtra>
-    <justification>2</justification>
-    <width>40</width>
-   </DPColumn>
-   <DPColumn>
-    <index>6</index>
+    <index>4</index>
     <title>"User"</title>
     <content>"uname"</content>
     <DPExtra>
     </DPExtra>
     <justification>2</justification>
-    <width>80</width>
+    <width>54</width>
    </DPColumn>
    <DPColumn>
-    <index>7</index>
+    <index>5</index>
     <title>"Group"</title>
     <content>"gname"</content>
     <DPExtra>
     </DPExtra>
     <justification>2</justification>
-    <width>64</width>
+    <width>60</width>
    </DPColumn>
    <DPColumn>
-    <index>8</index>
-    <title>"Created"</title>
-    <content>"ctime"</content>
-    <DPExtra>
-     <dateformat>"%Y-%m-%d %H:%M:%S"</dateformat>
-    </DPExtra>
-    <justification>0</justification>
-    <width>184</width>
-   </DPColumn>
-   <DPColumn>
-    <index>9</index>
+    <index>6</index>
     <title>"Modified"</title>
     <content>"mtime"</content>
     <DPExtra>
      <dateformat>"%Y-%m-%d %H:%M.%S"</dateformat>
     </DPExtra>
     <justification>2</justification>
-    <width>180</width>
+    <width>122</width>
    </DPColumn>
    <DPSort>
     <content>"name"</content>
@@ -114,17 +84,18 @@
     <nocase>FALSE</nocase>
    </DPSort>
    <defpath>"@history[0]"</defpath>
-   <path_above>TRUE</path_above>
+   <path_above>FALSE</path_above>
    <hide_allowed>TRUE</hide_allowed>
    <scrollbar_always>TRUE</scrollbar_always>
    <huge_parent>FALSE</huge_parent>
-   <set_font>FALSE</set_font>
-   <font_name>""</font_name>
-   <rubber_banding>FALSE</rubber_banding>
-   <sbar_pos>"system"</sbar_pos>
+   <set_font>TRUE</set_font>
+   <font_name>"Monospace 8"</font_name>
+   <rubber_banding>TRUE</rubber_banding>
+   <rules>TRUE</rules>
+   <sbar_pos>"right"</sbar_pos>
   </DirPaneLeft>
   <DirPaneRight>
-   <columns>10</columns>
+   <columns>7</columns>
    <DPColumn>
     <index>0</index>
     <title>"I"</title>
@@ -132,7 +103,7 @@
     <DPExtra>
     </DPExtra>
     <justification>2</justification>
-    <width>23</width>
+    <width>36</width>
    </DPColumn>
    <DPColumn>
     <index>1</index>
@@ -143,88 +114,58 @@
      <show_linkname>TRUE</show_linkname>
     </DPExtra>
     <justification>0</justification>
-    <width>314</width>
+    <width>250</width>
    </DPColumn>
    <DPColumn>
     <index>2</index>
     <title>"Size"</title>
     <content>"size"</content>
     <DPExtra>
-     <unit>"smart"</unit>
+     <unit>"bytesnounit"</unit>
      <ticks>TRUE</ticks>
      <tick>","</tick>
-     <digits>1</digits>
+     <digits>3</digits>
      <dir_fs>TRUE</dir_fs>
     </DPExtra>
     <justification>1</justification>
-    <width>74</width>
+    <width>100</width>
    </DPColumn>
    <DPColumn>
     <index>3</index>
-    <title>"Mode"</title>
-    <content>"modenum"</content>
-    <DPExtra>
-     <numformat>"%o"</numformat>
-    </DPExtra>
-    <justification>1</justification>
-    <width>57</width>
-   </DPColumn>
-   <DPColumn>
-    <index>4</index>
     <title>"Mode2"</title>
     <content>"modestr"</content>
     <DPExtra>
     </DPExtra>
     <justification>2</justification>
-    <width>96</width>
+    <width>68</width>
    </DPColumn>
    <DPColumn>
-    <index>5</index>
-    <title>"Nlink"</title>
-    <content>"nlink"</content>
-    <DPExtra>
-     <numformat>"%d"</numformat>
-    </DPExtra>
-    <justification>2</justification>
-    <width>40</width>
-   </DPColumn>
-   <DPColumn>
-    <index>6</index>
+    <index>4</index>
     <title>"User"</title>
     <content>"uname"</content>
     <DPExtra>
     </DPExtra>
     <justification>2</justification>
-    <width>80</width>
+    <width>54</width>
    </DPColumn>
    <DPColumn>
-    <index>7</index>
+    <index>5</index>
     <title>"Group"</title>
     <content>"gname"</content>
     <DPExtra>
     </DPExtra>
     <justification>2</justification>
-    <width>64</width>
+    <width>60</width>
    </DPColumn>
    <DPColumn>
-    <index>8</index>
-    <title>"Created"</title>
-    <content>"ctime"</content>
-    <DPExtra>
-     <dateformat>"%Y-%m-%d %H:%M:%S"</dateformat>
-    </DPExtra>
-    <justification>0</justification>
-    <width>184</width>
-   </DPColumn>
-   <DPColumn>
-    <index>9</index>
+    <index>6</index>
     <title>"Modified"</title>
     <content>"mtime"</content>
     <DPExtra>
      <dateformat>"%Y-%m-%d %H:%M.%S"</dateformat>
     </DPExtra>
     <justification>2</justification>
-    <width>180</width>
+    <width>122</width>
    </DPColumn>
    <DPSort>
     <content>"name"</content>
@@ -233,19 +174,20 @@
     <nocase>FALSE</nocase>
    </DPSort>
    <defpath>"@history[0]"</defpath>
-   <path_above>TRUE</path_above>
+   <path_above>FALSE</path_above>
    <hide_allowed>TRUE</hide_allowed>
    <scrollbar_always>TRUE</scrollbar_always>
    <huge_parent>FALSE</huge_parent>
-   <set_font>FALSE</set_font>
-   <font_name>""</font_name>
-   <rubber_banding>FALSE</rubber_banding>
-   <sbar_pos>"system"</sbar_pos>
+   <set_font>TRUE</set_font>
+   <font_name>"Monospace 8"</font_name>
+   <rubber_banding>TRUE</rubber_banding>
+   <rules>TRUE</rules>
+   <sbar_pos>"right"</sbar_pos>
   </DirPaneRight>
   <DirPanePaning>
    <orientation>"horizontal"</orientation>
    <mode>"ratio"</mode>
-   <value>0.500000</value>
+   <value>0.5</value>
   </DirPanePaning>
   <DirPaneHistory>
    <select>TRUE</select>
@@ -254,60 +196,55 @@
  </DirPanes>
  <CmdSeqs>
   <CmdSeq>
-   <name>"view_image"</name>
+   <name>"test_checkbox"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"display {Fup}"</def>
+     <def>"echo {It:&quot;Testing checkboxes&quot;} {Ix:&quot;One&quot;} {Ix:&quot;Two&quot;} {Ix:&quot;Three&quot;}"</def>
      <flags>0</flags>
      <CX_External>
-      <gflags>9</gflags>
-      <bflags>4</bflags>
+      <gflags>0</gflags>
+      <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
     </CmdRow>
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"run_script"</name>
+   <name>"wrap_about"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"Built-In"</type>
+     <def>"About"</def>
+     <flags>0</flags>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"play_mod"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"/usr/bin/env bash {fup}"</def>
+     <def>"xmp {fup}"</def>
      <flags>0</flags>
      <CX_External>
-      <gflags>16</gflags>
-      <bflags>20</bflags>
+      <gflags>3</gflags>
+      <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
     </CmdRow>
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"new_shell"</name>
+   <name>"test_pipe"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"xterm -geometry 88x35 -bg black -fg grey"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>4</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_howto"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"less {fup}"</def>
+     <def>"bash -c &apos;echo {Fup} | wc&apos;"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>4</gflags>
@@ -318,17 +255,129 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"uncompress_gzip"</name>
+   <name>"run_file"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"gunzip {Fup}"</def>
+     <def>"/usr/bin/env bash -c {fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>4</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"view_ps"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"gv {fut}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>1</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"uncompress_tar_bzip2"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"tar --use-compress-program=bzip2 -xf {fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>0</gflags>
+      <bflags>8</bflags>
+      <aflags>2</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"test_uri"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"echo {uq}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>0</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"unmount"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"umount  {fpu}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>0</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"run_calculator"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"gnome-calculator"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>3</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"compress_gzip"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"gzip -9 {Fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>0</gflags>
       <bflags>0</bflags>
       <aflags>1</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"view_video"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"mplayer -quiet -vo x11 {fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>0</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
      </CX_External>
     </CmdRow>
    </CmdRows>
@@ -365,28 +414,12 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"test_dirparent"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"Built-In"</type>
-     <def>"DirParent"</def>
-     <flags>0</flags>
-    </CmdRow>
-    <CmdRow>
-     <type>"Built-In"</type>
-     <def>"About"</def>
-     <flags>0</flags>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_tar_gzip"</name>
+   <name>"view_rfc"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"tar -tvzf {fup}"</def>
+     <def>"less {fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>4</gflags>
@@ -397,92 +430,12 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"view_mol_vmd"</name>
+   <name>"edit_text"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"vmd {Fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"test_menu"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"echo {Im:&quot;First&quot;=&quot;Hello,:1&quot;,&quot;Good day,:2&quot;,&quot;Good evening,:3&quot;,&quot;Hi,:4&quot;,&quot;Yo:5&quot;} {Im:&quot;Second&quot;=&quot;person&quot;,&quot;dude&quot;,&quot;geek&quot;}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>0</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_pdf_evince"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"evince {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_zip"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"unzip -v {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>4</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"uncompress_bzip"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"bunzip2 {Fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>0</gflags>
-      <bflags>0</bflags>
-      <aflags>1</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_ps"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"gv {fut}"</def>
+     <def>"{$EDITOR} {fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>1</gflags>
@@ -493,33 +446,33 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"compress_gzip"</name>
+   <name>"uncompress_rar"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"gzip -9 {Fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>0</gflags>
-      <bflags>0</bflags>
-      <aflags>1</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"uncompress_zip"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"unzip -qq -o {fup}"</def>
+     <def>"unrar x -inul {fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>0</gflags>
       <bflags>8</bflags>
       <aflags>2</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"echo_selection"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"echo  {FEu}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>0</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
      </CX_External>
     </CmdRow>
    </CmdRows>
@@ -541,365 +494,18 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"edit_text_gedit"</name>
+   <name>"test_exec"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"gedit {Fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>1</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_bzip2"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"bzcat {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>4</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_video_mplayer"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"mplayer {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_mol_avogadro"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"avogadro {Fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"uncompress_tar_bzip2"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"tar --use-compress-program=bzip2 -xf {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>0</gflags>
-      <bflags>8</bflags>
-      <aflags>2</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_tar_bzip2"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"tar -tvf {fpu} --use-compress-prog=bunzip2"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>4</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"compress_bzip"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"bzip2 {Fup}"</def>
+     <def>"nonexistant {fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>0</gflags>
       <bflags>0</bflags>
-      <aflags>1</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_gzip"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"zcat {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>4</gflags>
-      <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_rpm"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"rpm -SOME_SMART_OPTION {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>4</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_deb"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"dpkg-deb -c {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>4</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"touch"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"touch {It:&quot;Input new file name&quot;} {It:&quot;-&quot;} {Is:&quot;Name:&quot;=&quot;newfile&quot;}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>0</gflags>
-      <bflags>0</bflags>
-      <aflags>3</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"edit_gimp"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"gimp {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>3</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"edit_abiword"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"abiword {Fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"diff"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"diff -pu {fpu} {fdup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>4</gflags>
-      <bflags>16</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"edit_lowriter"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"lowriter {Fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_rar"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"unrar lt {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>4</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"play_music_mplayer"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"xterm -e mplayer {Fpu}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"edit_text_scite"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"scite {Fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"run_file"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"/usr/bin/env bash -c {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>4</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"edit_gnumeric"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"gnumeric {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"edit_kbibtex"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"kbibtex {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"test_call"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"Built-In"</type>
-     <def>"wrap_about"</def>
-     <flags>0</flags>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"mouse_right"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"Built-In"</type>
-     <def>"SelectRow action=select"</def>
-     <flags>0</flags>
-    </CmdRow>
-    <CmdRow>
-     <type>"Built-In"</type>
-     <def>"MenuPopup"</def>
-     <flags>0</flags>
     </CmdRow>
    </CmdRows>
   </CmdSeq>
@@ -930,31 +536,15 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"convert_mp3"</name>
-   <flags>1</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"bash -c &apos;mpg123 -q -w $(basename {f} .mp3).wav {fup}&apos;"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>0</gflags>
-      <bflags>4</bflags>
-      <aflags>1</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_html_firefox"</name>
+   <name>"view_gzip"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"iceweasel {fup}"</def>
+     <def>"zcat {fup}"</def>
      <flags>0</flags>
      <CX_External>
-      <gflags>9</gflags>
+      <gflags>4</gflags>
       <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
@@ -962,12 +552,55 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"uncompress_rar"</name>
+   <name>"view_howto"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"unrar x -inul {fup}"</def>
+     <def>"less {fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>4</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"test_call"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"Built-In"</type>
+     <def>"wrap_about"</def>
+     <flags>0</flags>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"compress_tar"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"tar {It:&quot;Create tar archive&quot;}{Ic:&quot;Mode&quot;=&quot;-cf&quot;,&quot;-czf&quot;,&quot;-cyf&quot;} {Pd}/{Is:&quot;Archive Name&quot;} {Ix:&quot;Dereference links?&quot;=&quot;-h&quot;,&quot;&quot;}{Ix:&quot;Compress?&quot;=&quot;-z&quot;,&quot;&quot;} {Fu}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>16</gflags>
+      <bflags>4</bflags>
+      <aflags>2</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"uncompress_zip"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"unzip -qq -o {fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>0</gflags>
@@ -978,13 +611,18 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"wrap_about"</name>
+   <name>"Unnamed_1"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
-     <type>"Built-In"</type>
-     <def>"About"</def>
+     <type>"External"</type>
+     <def>"tar -tvzf {fup}"</def>
      <flags>0</flags>
+     <CX_External>
+      <gflags>4</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
     </CmdRow>
    </CmdRows>
   </CmdSeq>
@@ -1005,15 +643,95 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"view_chm"</name>
+   <name>"view_pdf"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"xchm {fup}"</def>
+     <def>" evince {fup}"</def>
      <flags>0</flags>
      <CX_External>
-      <gflags>9</gflags>
+      <gflags>0</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"view_image"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"eog {Fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>0</gflags>
+      <bflags>4</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"test_menu"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"echo {Im:&quot;First&quot;=&quot;Hello,:1&quot;,&quot;Good day,:2&quot;,&quot;Good evening,:3&quot;,&quot;Hi,:4&quot;,&quot;Yo:5&quot;} {Im:&quot;Second&quot;=&quot;person&quot;,&quot;dude&quot;,&quot;geek&quot;}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>0</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"view_html"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"lynx -dump {fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>4</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"run_missing"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"whatever {Fpu}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>0</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"Unnamed"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"bzcat {fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>4</gflags>
       <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
@@ -1037,44 +755,12 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"view_rfc"</name>
-   <flags>0</flags>
+   <name>"echo_selection_first"</name>
+   <flags>1</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"less {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>4</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"edit_gnucash"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"gnucash {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"unmount"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"umount  {fpu}"</def>
+     <def>"echo {fu}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>0</gflags>
@@ -1085,28 +771,28 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"view_pdf_xpdf"</name>
+   <name>"test_dirparent"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
-     <type>"External"</type>
-     <def>"xpdf {fup}"</def>
+     <type>"Built-In"</type>
+     <def>"DirParent"</def>
      <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
+    </CmdRow>
+    <CmdRow>
+     <type>"Built-In"</type>
+     <def>"About"</def>
+     <flags>0</flags>
     </CmdRow>
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"play_sample"</name>
+   <name>"edit_image"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"aplay {fup}"</def>
+     <def>"gimp {fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>0</gflags>
@@ -1117,95 +803,15 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"edit_text_gvim"</name>
+   <name>"play_mp3"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"gvim {Fup}"</def>
+     <def>"xmms {Fup}"</def>
      <flags>0</flags>
      <CX_External>
-      <gflags>0</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_djvu"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"djview {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"test_input"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"echo {It:&quot;String input defaults to first selected filename:&quot;} {It:&quot;-&quot;} {Is:&quot;Name:&quot;=&quot;prefix-{fQ}-postfix&quot;}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>0</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"test_pipe"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"bash -c &apos;echo {Fup} | wc&apos;"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>4</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"test_checkbox"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"echo {It:&quot;Testing checkboxes&quot;} {Ix:&quot;One&quot;} {Ix:&quot;Two&quot;} {Ix:&quot;Three&quot;}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>0</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"diff_kdiff3"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"kdiff3 {fpu} {fdup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
+      <gflags>1</gflags>
       <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
@@ -1229,15 +835,159 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"edit_localc"</name>
+   <name>"play_sid"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"localc {fup}"</def>
+     <def>"sidplay {fup}"</def>
      <flags>0</flags>
      <CX_External>
-      <gflags>9</gflags>
+      <gflags>1</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"diff"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"diff -pu {fpu} {fdup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>4</gflags>
+      <bflags>16</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"print_selected"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"echo {Fpu}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>0</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"view_deb"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"dpkg-deb -c {fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>4</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"view_rar"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"unrar lt {fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>4</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"mouse_right"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"Built-In"</type>
+     <def>"SelectRow action=select"</def>
+     <flags>0</flags>
+    </CmdRow>
+    <CmdRow>
+     <type>"Built-In"</type>
+     <def>"MenuPopup"</def>
+     <flags>0</flags>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"run_script"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"/usr/bin/env bash {fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>16</gflags>
+      <bflags>20</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"test_input"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"echo {It:&quot;String input defaults to first selected filename:&quot;} {It:&quot;-&quot;} {Is:&quot;Name:&quot;=&quot;prefix-{fQ}-postfix&quot;}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>0</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"convert_mp3"</name>
+   <flags>1</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"bash -c &apos;mpg123 -q -w $(basename {f} .mp3).wav {fup}&apos;"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>0</gflags>
+      <bflags>4</bflags>
+      <aflags>1</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"view_rpm"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"rpm -SOME_SMART_OPTION {fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>4</gflags>
       <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
@@ -1261,12 +1011,12 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"view_html_lynx"</name>
+   <name>"view_zip"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"lynx -dump {fup}"</def>
+     <def>"unzip -v {fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>4</gflags>
@@ -1277,65 +1027,49 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"test_exec"</name>
+   <name>"new_shell"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"nonexistant {fup}"</def>
+     <def>"{$COLORTERM}"</def>
      <flags>0</flags>
      <CX_External>
-      <gflags>0</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"echo_selection"</name>
-   <flags>1</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"echo {Fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>0</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"edit_loimpress"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"loimpress {Fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>9</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"compress_tar"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"tar {It:&quot;Create tar archive&quot;}{Ic:&quot;Mode&quot;=&quot;-cf&quot;,&quot;-czf&quot;,&quot;-cyf&quot;} {Pd}/{Is:&quot;Archive Name&quot;} {Ix:&quot;Dereference links?&quot;=&quot;-h&quot;,&quot;&quot;}{Ix:&quot;Compress?&quot;=&quot;-z&quot;,&quot;&quot;} {Fu}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>16</gflags>
+      <gflags>1</gflags>
       <bflags>4</bflags>
-      <aflags>2</aflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"play_sample"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"aplay {fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>0</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"uncompress_gzip"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"gunzip {Fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>0</gflags>
+      <bflags>0</bflags>
+      <aflags>1</aflags>
      </CX_External>
     </CmdRow>
    </CmdRows>
@@ -1349,15 +1083,11 @@
    <copy_dates>TRUE</copy_dates>
    <ignore_attrib_err>TRUE</ignore_attrib_err>
    <leave_fullsize>TRUE</leave_fullsize>
-   <buf_size>u262144</buf_size>
+   <buf_size>u2097152</buf_size>
   </Copy>
   <Delete>
    <set_mode>u1</set_mode>
   </Delete>
-  <DpFocus>
-   <fake_select>FALSE</fake_select>
-   <focus_select>TRUE</focus_select>
-  </DpFocus>
   <GetSize>
    <unselect>FALSE</unselect>
   </GetSize>
@@ -1370,12 +1100,12 @@
    <tick>","</tick>
   </Information>
   <MkDir>
-   <cd_new>FALSE</cd_new>
+   <cd_new>TRUE</cd_new>
    <focus_new>FALSE</focus_new>
   </MkDir>
   <Rename>
-   <inplace>FALSE</inplace>
-   <preselect>u1</preselect>
+   <inplace>TRUE</inplace>
+   <preselect>u2</preselect>
   </Rename>
   <ViewText>
    <buf_size>u1048576</buf_size>
@@ -1398,7 +1128,7 @@
     </Property>
     <Property>
      <name>"uBG"</name>
-     <color>CA7C2,AE8E,BF76</color>
+     <color>CE665,E665,E665</color>
     </Property>
     <Property>
      <name>"View"</name>
@@ -1418,7 +1148,7 @@
   <Style>
    <name>"Archive"</name>
    <parent>"Data"</parent>
-   <expand>FALSE</expand>
+   <expand>TRUE</expand>
    <Properties>
     <Property>
      <name>"ClickMClick"</name>
@@ -1496,36 +1226,6 @@
    </Properties>
   </Style>
   <Style>
-   <name>"Tar BZip2"</name>
-   <parent>"Archive"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"View"</name>
-     <action>"view_tar_bzip2"</action>
-    </Property>
-    <Property>
-     <name>"extract"</name>
-     <action>"uncompress_tar_bzip2"</action>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
-   <name>"Tar GZip"</name>
-   <parent>"Archive"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"View"</name>
-     <action>"view_tar_gzip"</action>
-    </Property>
-    <Property>
-     <name>"extract"</name>
-     <action>"uncompress_tar_gzip"</action>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
    <name>"ZIP"</name>
    <parent>"Archive"</parent>
    <expand>TRUE</expand>
@@ -1574,158 +1274,6 @@
    </Properties>
   </Style>
   <Style>
-   <name>"Document"</name>
-   <parent>"Data"</parent>
-   <expand>TRUE</expand>
-  </Style>
-  <Style>
-   <name>"CHM"</name>
-   <parent>"Document"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"View"</name>
-     <action>"view_chm"</action>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
-   <name>"Djvu"</name>
-   <parent>"Document"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"txt.xpm"</icon>
-    </Property>
-    <Property>
-     <name>"View"</name>
-     <action>"view_djvu"</action>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
-   <name>"Gnucash"</name>
-   <parent>"Document"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"View"</name>
-     <action>"edit_gnucash"</action>
-    </Property>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"Spreadsheet.xpm"</icon>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
-   <name>"MS Word"</name>
-   <parent>"Document"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"OpenOffice"</name>
-     <action>"edit_lowriter"</action>
-    </Property>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"MSWordDoc.xpm"</icon>
-    </Property>
-    <Property>
-     <name>"View"</name>
-     <action>"edit_abiword"</action>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
-   <name>"PDF"</name>
-   <parent>"Document"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"View (evince)"</name>
-     <action>"view_pdf_evince"</action>
-    </Property>
-    <Property>
-     <name>"Default"</name>
-     <action>"FileAction action=&quot;View (evince)&quot;"</action>
-    </Property>
-    <Property>
-     <name>"View (xpdf)"</name>
-     <action>"view_pdf_xpdf"</action>
-    </Property>
-    <Property>
-     <name>"View (acroread)"</name>
-     <action>"view_pdf_acroread"</action>
-    </Property>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"pdf.xpm"</icon>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
-   <name>"PostScript"</name>
-   <parent>"Document"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"Gimp"</name>
-     <action>"edit_image"</action>
-    </Property>
-    <Property>
-     <name>"View"</name>
-     <action>"view_ps"</action>
-    </Property>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"ps.xpm"</icon>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
-   <name>"RTF"</name>
-   <parent>"Document"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"View"</name>
-     <action>"edit_lowriter"</action>
-    </Property>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"txt.xpm"</icon>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
-   <name>"SXC"</name>
-   <parent>"Document"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"View"</name>
-     <action>"edit_localc"</action>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
-   <name>"SXW"</name>
-   <parent>"Document"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"Default"</name>
-     <action>"edit_lowriter"</action>
-    </Property>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"txt.xpm"</icon>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
    <name>"Image"</name>
    <parent>"Data"</parent>
    <expand>FALSE</expand>
@@ -1744,7 +1292,7 @@
     </Property>
     <Property>
      <name>"uIcon"</name>
-     <icon>"image.png"</icon>
+     <icon>"Image.xpm"</icon>
     </Property>
     <Property>
      <name>"Edit"</name>
@@ -1759,7 +1307,7 @@
    <Properties>
     <Property>
      <name>"uIcon"</name>
-     <icon>"bmp.xpm"</icon>
+     <icon>"Windows.xpm"</icon>
     </Property>
    </Properties>
   </Style>
@@ -1808,17 +1356,6 @@
    </Properties>
   </Style>
   <Style>
-   <name>"PNM"</name>
-   <parent>"Image"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"png2.xpm"</icon>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
    <name>"TARGA"</name>
    <parent>"Image"</parent>
    <expand>TRUE</expand>
@@ -1852,37 +1389,6 @@
    </Properties>
   </Style>
   <Style>
-   <name>"Presentation"</name>
-   <parent>"Data"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"Image.xpm"</icon>
-    </Property>
-    <Property>
-     <name>"Impress"</name>
-     <action>"edit_loimpress"</action>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
-   <name>"Impress"</name>
-   <parent>"Presentation"</parent>
-   <expand>TRUE</expand>
-  </Style>
-  <Style>
-   <name>"Powerpoint"</name>
-   <parent>"Presentation"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"Windows.xpm"</icon>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
    <name>"Sound"</name>
    <parent>"Data"</parent>
    <expand>FALSE</expand>
@@ -1895,40 +1401,12 @@
      <name>"uFG"</name>
      <color>C4848,4848,6868</color>
     </Property>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"Speaker.xpm"</icon>
-    </Property>
    </Properties>
   </Style>
   <Style>
    <name>"Music"</name>
    <parent>"Sound"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"Speaker2.xpm"</icon>
-    </Property>
-    <Property>
-     <name>"View"</name>
-     <action>"Play"</action>
-    </Property>
-    <Property>
-     <name>"Play"</name>
-     <action>"play_music_mplayer"</action>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
-   <name>"APE"</name>
-   <parent>"Music"</parent>
-   <expand>TRUE</expand>
-  </Style>
-  <Style>
-   <name>"FLAC"</name>
-   <parent>"Music"</parent>
-   <expand>TRUE</expand>
+   <expand>FALSE</expand>
   </Style>
   <Style>
    <name>"MP3"</name>
@@ -1940,15 +1418,10 @@
      <icon>"mp3.xpm"</icon>
     </Property>
     <Property>
-     <name>"View"</name>
-     <action>""</action>
+     <name>"Play"</name>
+     <action>"play_mp3"</action>
     </Property>
    </Properties>
-  </Style>
-  <Style>
-   <name>"MPC"</name>
-   <parent>"Music"</parent>
-   <expand>TRUE</expand>
   </Style>
   <Style>
    <name>"Module"</name>
@@ -1964,11 +1437,6 @@
      <action>"play_mod"</action>
     </Property>
    </Properties>
-  </Style>
-  <Style>
-   <name>"OGG"</name>
-   <parent>"Music"</parent>
-   <expand>TRUE</expand>
   </Style>
   <Style>
    <name>"SID"</name>
@@ -2019,66 +1487,17 @@
    </Properties>
   </Style>
   <Style>
-   <name>"Spreadsheet"</name>
-   <parent>"Data"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"Gnumeric"</name>
-     <action>"edit_gnumeric"</action>
-    </Property>
-    <Property>
-     <name>"Calc"</name>
-     <action>"localc {Fup}"</action>
-    </Property>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"Spreadsheet.xpm"</icon>
-    </Property>
-    <Property>
-     <name>"View"</name>
-     <action>"ViewText mode=Gnumeric"</action>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
-   <name>"Excel"</name>
-   <parent>"Spreadsheet"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"ExcelCalcXLS.xpm"</icon>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
-   <name>"Gnumeric"</name>
-   <parent>"Spreadsheet"</parent>
-   <expand>TRUE</expand>
-   <Properties>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"GnomeCalc.xpm"</icon>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
    <name>"Text"</name>
    <parent>"Data"</parent>
    <expand>TRUE</expand>
    <Properties>
     <Property>
      <name>"View"</name>
-     <action>"ViewText"</action>
+     <action>"ViewText encoding=ISO-8859-1"</action>
     </Property>
     <Property>
      <name>"uFG"</name>
      <color>C0000,6666,3333</color>
-    </Property>
-    <Property>
-     <name>"Edit (gedit)"</name>
-     <action>"edit_text_gedit"</action>
     </Property>
     <Property>
      <name>"uIcon"</name>
@@ -2086,7 +1505,7 @@
     </Property>
     <Property>
      <name>"Edit"</name>
-     <action>"edit_text_kwrite"</action>
+     <action>"edit_text"</action>
     </Property>
    </Properties>
   </Style>
@@ -2134,11 +1553,33 @@
    <Properties>
     <Property>
      <name>"View"</name>
-     <action>"view_html_firefox"</action>
+     <action>"view_html"</action>
     </Property>
     <Property>
      <name>"uIcon"</name>
      <icon>"html.xpm"</icon>
+    </Property>
+   </Properties>
+  </Style>
+  <Style>
+   <name>"MS Word"</name>
+   <parent>"Text"</parent>
+   <expand>TRUE</expand>
+   <Properties>
+    <Property>
+     <name>"uIcon"</name>
+     <icon>"MSWordDoc.xpm"</icon>
+    </Property>
+   </Properties>
+  </Style>
+  <Style>
+   <name>"Makefile"</name>
+   <parent>"Text"</parent>
+   <expand>TRUE</expand>
+   <Properties>
+    <Property>
+     <name>"uIcon"</name>
+     <icon>"Makefile.xpm"</icon>
     </Property>
    </Properties>
   </Style>
@@ -2158,36 +1599,17 @@
    </Properties>
   </Style>
   <Style>
-   <name>"Molecule"</name>
+   <name>"PDF"</name>
    <parent>"Text"</parent>
-   <expand>FALSE</expand>
-   <Properties>
-    <Property>
-     <name>"uIcon"</name>
-     <icon>"pdb.xpm"</icon>
-    </Property>
-   </Properties>
-  </Style>
-  <Style>
-   <name>"XYZ"</name>
-   <parent>"Molecule"</parent>
    <expand>TRUE</expand>
    <Properties>
     <Property>
-     <name>"Default"</name>
-     <action>"FileAction action=&quot;View (Avogadro)&quot;"</action>
-    </Property>
-    <Property>
-     <name>"View (Avogadro)"</name>
-     <action>"view_mol_avogadro"</action>
-    </Property>
-    <Property>
-     <name>"View (VMD)"</name>
-     <action>"view_mol_vmd"</action>
+     <name>"View"</name>
+     <action>"view_pdf"</action>
     </Property>
     <Property>
      <name>"uIcon"</name>
-     <icon>"pdb.xpm"</icon>
+     <icon>"pdf.xpm"</icon>
     </Property>
    </Properties>
   </Style>
@@ -2206,6 +1628,21 @@
    <name>"Plain"</name>
    <parent>"Text"</parent>
    <expand>TRUE</expand>
+  </Style>
+  <Style>
+   <name>"PostScript"</name>
+   <parent>"Text"</parent>
+   <expand>TRUE</expand>
+   <Properties>
+    <Property>
+     <name>"View"</name>
+     <action>"view_ps"</action>
+    </Property>
+    <Property>
+     <name>"uIcon"</name>
+     <icon>"ps.xpm"</icon>
+    </Property>
+   </Properties>
   </Style>
   <Style>
    <name>"RFC"</name>
@@ -2239,97 +1676,83 @@
    <expand>TRUE</expand>
   </Style>
   <Style>
-   <name>"Bibtex"</name>
+   <name>"C Header"</name>
    <parent>"Source Code"</parent>
    <expand>TRUE</expand>
    <Properties>
     <Property>
-     <name>"View"</name>
-     <action>"FileAction action=Edit"</action>
-    </Property>
-    <Property>
-     <name>"Edit"</name>
-     <action>"edit_kbibtex"</action>
-    </Property>
-    <Property>
-     <name>"Kwrite"</name>
-     <action>"edit_text_kwrite"</action>
-    </Property>
-    <Property>
      <name>"uIcon"</name>
-     <icon>"tex.xpm"</icon>
+     <icon>"h.xpm"</icon>
     </Property>
    </Properties>
-  </Style>
-  <Style>
-   <name>"C Header"</name>
-   <parent>"Source Code"</parent>
-   <expand>TRUE</expand>
   </Style>
   <Style>
    <name>"C Source"</name>
    <parent>"Source Code"</parent>
    <expand>TRUE</expand>
+   <Properties>
+    <Property>
+     <name>"uIcon"</name>
+     <icon>"c.xpm"</icon>
+    </Property>
+   </Properties>
   </Style>
   <Style>
    <name>"Java Source"</name>
    <parent>"Source Code"</parent>
    <expand>TRUE</expand>
+   <Properties>
+    <Property>
+     <name>"uIcon"</name>
+     <icon>"java.xpm"</icon>
+    </Property>
+   </Properties>
   </Style>
   <Style>
    <name>"M4"</name>
    <parent>"Source Code"</parent>
    <expand>TRUE</expand>
-  </Style>
-  <Style>
-   <name>"Makefile"</name>
-   <parent>"Source Code"</parent>
-   <expand>TRUE</expand>
    <Properties>
     <Property>
      <name>"uIcon"</name>
-     <icon>"Makefile.xpm"</icon>
+     <icon>"Source.xpm"</icon>
     </Property>
    </Properties>
-  </Style>
-  <Style>
-   <name>"PHP"</name>
-   <parent>"Source Code"</parent>
-   <expand>TRUE</expand>
   </Style>
   <Style>
    <name>"Perl"</name>
    <parent>"Source Code"</parent>
    <expand>TRUE</expand>
+   <Properties>
+    <Property>
+     <name>"uIcon"</name>
+     <icon>"pl.xpm"</icon>
+    </Property>
+   </Properties>
   </Style>
   <Style>
    <name>"Python"</name>
    <parent>"Source Code"</parent>
    <expand>TRUE</expand>
-  </Style>
-  <Style>
-   <name>"Tex"</name>
-   <parent>"Source Code"</parent>
-   <expand>TRUE</expand>
    <Properties>
     <Property>
-     <name>"Kile"</name>
-     <action>"edit_kile"</action>
-    </Property>
-    <Property>
      <name>"uIcon"</name>
-     <icon>"tex.xpm"</icon>
+     <icon>"py.xpm"</icon>
     </Property>
    </Properties>
   </Style>
   <Style>
    <name>"Video"</name>
    <parent>"Data"</parent>
-   <expand>FALSE</expand>
+   <expand>TRUE</expand>
    <Properties>
     <Property>
+     <name>"uFG"</name>
+     <color>CA665,0000,428F</color>
+    </Property>
+    <Property>
      <name>"View"</name>
-     <action>"view_video_mplayer"</action>
+     <action>"view_video"</action>
     </Property>
     <Property>
      <name>"uIcon"</name>
@@ -2352,16 +1775,6 @@
      <icon>"avi.xpm"</icon>
     </Property>
    </Properties>
-  </Style>
-  <Style>
-   <name>"DIVX"</name>
-   <parent>"Video"</parent>
-   <expand>TRUE</expand>
-  </Style>
-  <Style>
-   <name>"MP4"</name>
-   <parent>"Video"</parent>
-   <expand>TRUE</expand>
   </Style>
   <Style>
    <name>"MPEG"</name>
@@ -2397,7 +1810,7 @@
     </Property>
     <Property>
      <name>"uFG"</name>
-     <color>C1536,1685,3AF4</color>
+     <color>CFFFF,3333,3333</color>
     </Property>
     <Property>
      <name>"unmount"</name>
@@ -2509,7 +1922,9 @@
   <FileType>
    <name>"Archive, Tar"</name>
    <mode>32768</mode>
-   <suffix>".tar"</suffix>
+   <name_re>"*.tar*"</name_re>
+   <name_glob>TRUE</name_glob>
+   <name_nocase>FALSE</name_nocase>
    <style>"Tar"</style>
   </FileType>
   <FileType>
@@ -2517,22 +1932,6 @@
    <mode>32768</mode>
    <suffix>".rar"</suffix>
    <style>"Rar"</style>
-  </FileType>
-  <FileType>
-   <name>"Archive, Tar BZip2"</name>
-   <mode>32768</mode>
-   <name_re>"^.+\\.(tbz|tar\\.bz2)$"</name_re>
-   <name_glob>FALSE</name_glob>
-   <name_nocase>FALSE</name_nocase>
-   <style>"Tar BZip2"</style>
-  </FileType>
-  <FileType>
-   <name>"Archive, Tar Gzip"</name>
-   <mode>32768</mode>
-   <name_re>".+\\.(tar\\.gz|tgz)"</name_re>
-   <name_glob>FALSE</name_glob>
-   <name_nocase>FALSE</name_nocase>
-   <style>"Tar GZip"</style>
   </FileType>
   <FileType>
    <name>"Archive, ZIP"</name>
@@ -2601,58 +2000,24 @@
    <style>"PNG"</style>
   </FileType>
   <FileType>
-   <name>"iamge, PNM"</name>
-   <mode>32768</mode>
-   <suffix>".pnm"</suffix>
-   <style>"PNM"</style>
-  </FileType>
-  <FileType>
    <name>"Image, XPM"</name>
    <mode>32768</mode>
    <suffix>".xpm"</suffix>
    <style>"XPM"</style>
   </FileType>
   <FileType>
-   <name>"Molecule, XYZ"</name>
-   <mode>32768</mode>
-   <suffix>".xyz"</suffix>
-   <style>"XYZ"</style>
-  </FileType>
-  <FileType>
-   <name>"Sound, Music, APE"</name>
-   <mode>32768</mode>
-   <suffix>".ape"</suffix>
-   <style>"APE"</style>
-  </FileType>
-  <FileType>
-   <name>"Sound, Music, FLAC"</name>
-   <mode>32768</mode>
-   <suffix>".flac"</suffix>
-   <style>"FLAC"</style>
-  </FileType>
-  <FileType>
    <name>"Sound, Music, Module"</name>
    <mode>32768</mode>
-   <suffix>".mod"</suffix>
+   <name_re>"(^mod\\..+)|(.+\\.mod$)"</name_re>
+   <name_glob>FALSE</name_glob>
+   <name_nocase>FALSE</name_nocase>
    <style>"Module"</style>
-  </FileType>
-  <FileType>
-   <name>"Sound, Music, MPC"</name>
-   <mode>32768</mode>
-   <suffix>".mpc"</suffix>
-   <style>"MPC"</style>
   </FileType>
   <FileType>
    <name>"Sound, Music, MP3"</name>
    <mode>32768</mode>
    <suffix>".mp3"</suffix>
    <style>"MP3"</style>
-  </FileType>
-  <FileType>
-   <name>"Sound, Music, OGG"</name>
-   <mode>32768</mode>
-   <suffix>".ogg"</suffix>
-   <style>"OGG"</style>
   </FileType>
   <FileType>
    <name>"Sound, Music, SID"</name>
@@ -2691,12 +2056,6 @@
    <style>"Assembly Source"</style>
   </FileType>
   <FileType>
-   <name>"Source Code, BiBTeX"</name>
-   <mode>32768</mode>
-   <suffix>".bib"</suffix>
-   <style>"Bibtex"</style>
-  </FileType>
-  <FileType>
    <name>"Source Code, C Header"</name>
    <mode>32768</mode>
    <suffix>".h"</suffix>
@@ -2711,7 +2070,7 @@
   <FileType>
    <name>"Source Code, C++ Source"</name>
    <mode>32768</mode>
-   <name_re>"\\.(cpp|cc|cxx)$"</name_re>
+   <name_re>"\\.(cpp|cc)$"</name_re>
    <name_glob>FALSE</name_glob>
    <name_nocase>FALSE</name_nocase>
    <style>"C Source"</style>
@@ -2735,22 +2094,16 @@
    <style>"Perl"</style>
   </FileType>
   <FileType>
+   <name>"Source Code, PHP"</name>
+   <mode>32768</mode>
+   <suffix>".php"</suffix>
+   <style>"Source Code"</style>
+  </FileType>
+  <FileType>
    <name>"Source Code, Python"</name>
    <mode>32768</mode>
    <suffix>".py"</suffix>
    <style>"Python"</style>
-  </FileType>
-  <FileType>
-   <name>"Source code, Tex"</name>
-   <mode>32768</mode>
-   <suffix>".tex"</suffix>
-   <style>"Tex"</style>
-  </FileType>
-  <FileType>
-   <name>"Text, CHM"</name>
-   <mode>32768</mode>
-   <suffix>".chm"</suffix>
-   <style>"CHM"</style>
   </FileType>
   <FileType>
    <name>"Text, COPYING"</name>
@@ -2779,7 +2132,7 @@
   <FileType>
    <name>"Text, MS Word"</name>
    <mode>32768</mode>
-   <suffix>"^.doc[x]?$"</suffix>
+   <suffix>".doc"</suffix>
    <style>"MS Word"</style>
   </FileType>
   <FileType>
@@ -2793,7 +2146,7 @@
   <FileType>
    <name>"Text, Makefile"</name>
    <mode>32768</mode>
-   <name_re>"^(Makefile|.*\\.mk)$"</name_re>
+   <name_re>"^Makefile"</name_re>
    <name_glob>FALSE</name_glob>
    <name_nocase>FALSE</name_nocase>
    <style>"Makefile"</style>
@@ -2824,6 +2177,9 @@
    <name>"Text, Plain"</name>
    <mode>32768</mode>
    <suffix>".txt"</suffix>
+   <file_re>"ASCII text"</file_re>
+   <file_glob>FALSE</file_glob>
+   <file_nocase>FALSE</file_nocase>
    <style>"Plain"</style>
   </FileType>
   <FileType>
@@ -2841,12 +2197,6 @@
    <style>"RFC"</style>
   </FileType>
   <FileType>
-   <name>"Text, RTF"</name>
-   <mode>32768</mode>
-   <suffix>".rtf"</suffix>
-   <style>"RTF"</style>
-  </FileType>
-  <FileType>
    <name>"Video, 3GP"</name>
    <mode>32768</mode>
    <suffix>".3gp"</suffix>
@@ -2859,24 +2209,12 @@
    <style>"AVI"</style>
   </FileType>
   <FileType>
-   <name>"Video, DIVX"</name>
-   <mode>32768</mode>
-   <suffix>".divx"</suffix>
-   <style>"DIVX"</style>
-  </FileType>
-  <FileType>
    <name>"Video, MPEG"</name>
    <mode>32768</mode>
    <name_re>"\\.mpe?g$"</name_re>
    <name_glob>FALSE</name_glob>
    <name_nocase>FALSE</name_nocase>
    <style>"MPEG"</style>
-  </FileType>
-  <FileType>
-   <name>"Video, MP4"</name>
-   <mode>32768</mode>
-   <suffix>".mp4"</suffix>
-   <style>"MP4"</style>
   </FileType>
   <FileType>
    <name>"Video, MOV"</name>
@@ -2893,13 +2231,13 @@
   <FileType>
    <name>"Video, RealMedia"</name>
    <mode>32768</mode>
-   <suffix>".wmv"</suffix>
+   <suffix>".rm"</suffix>
    <style>"3GP"</style>
   </FileType>
   <FileType>
    <name>"Executable, Shared Object"</name>
    <mode>32768</mode>
-   <name_re>"^lib.+\\.so"</name_re>
+   <name_re>"^lib.+\\.so(\\.[0-9.]+)?"</name_re>
    <name_glob>FALSE</name_glob>
    <name_nocase>FALSE</name_nocase>
    <style>"Shared Object"</style>
@@ -2931,79 +2269,29 @@
   <FileType>
    <name>"Data, Compressed, GZip"</name>
    <mode>32768</mode>
-   <suffix>".rm"</suffix>
+   <suffix>".gz"</suffix>
    <style>"GZip"</style>
   </FileType>
   <FileType>
    <name>"Data, Compressed, BZip2"</name>
    <mode>32768</mode>
-   <suffix>".gz"</suffix>
+   <suffix>".bz2"</suffix>
    <style>"BZip2"</style>
   </FileType>
   <FileType>
-   <name>"Data, Gnucash"</name>
-   <mode>32768</mode>
-   <suffix>".gnucash"</suffix>
-   <style>"Gnucash"</style>
+   <name>"Special, Link"</name>
+   <mode>40960</mode>
+   <style>"FIFO"</style>
   </FileType>
   <FileType>
    <name>"Special, Socket"</name>
-   <mode>32768</mode>
-   <suffix>".bz2"</suffix>
+   <mode>49152</mode>
    <style>"Socket"</style>
   </FileType>
   <FileType>
    <name>"Special, FIFO"</name>
-   <mode>49152</mode>
+   <mode>4096</mode>
    <style>"FIFO"</style>
-  </FileType>
-  <FileType>
-   <name>"Spreadsheet, Gnumeric"</name>
-   <mode>32768</mode>
-   <suffix>".gnumeric"</suffix>
-   <style>"Gnumeric"</style>
-  </FileType>
-  <FileType>
-   <name>"Spreadsheet, Excel"</name>
-   <mode>32768</mode>
-   <suffix>".xls"</suffix>
-   <style>"Excel"</style>
-  </FileType>
-  <FileType>
-   <name>"Spreadsheet, OpenOffice"</name>
-   <mode>32768</mode>
-   <suffix>".odp"</suffix>
-   <style>"Impress"</style>
-  </FileType>
-  <FileType>
-   <name>"Presentation, PPT"</name>
-   <mode>32768</mode>
-   <suffix>".ppt"</suffix>
-   <style>"Powerpoint"</style>
-  </FileType>
-  <FileType>
-   <name>"Document, Djvu"</name>
-   <mode>32768</mode>
-   <suffix>".djvu"</suffix>
-   <style>"Djvu"</style>
-  </FileType>
-  <FileType>
-   <name>"Document, SXC"</name>
-   <mode>32768</mode>
-   <suffix>".sxc"</suffix>
-   <style>"SXC"</style>
-  </FileType>
-  <FileType>
-   <name>"Document, SXW"</name>
-   <mode>32768</mode>
-   <suffix>".sxw"</suffix>
-   <style>"SXW"</style>
-  </FileType>
-  <FileType>
-   <name>"Source code, PHP"</name>
-   <mode>32768</mode>
-   <suffix>".php"</suffix>
-   <style>"PHP"</style>
   </FileType>
   <FileType>
    <name>"Unknown"</name>
@@ -3113,7 +2401,8 @@
 	 <key>"&lt;Shift&gt;&lt;Control&gt;a"</key>
 	</BFace>
        </BFaces>
-       <flags>u0</flags>
+       <tooltip>"Ctrl+A / Shift+Ctrl+A"</tooltip>
+       <flags>u2</flags>
       </Button>
       <Button>
        <pos>u1</pos>
@@ -3236,7 +2525,8 @@
 	 <cmdseq>""</cmdseq>
 	</BFace>
        </BFaces>
-       <flags>u0</flags>
+       <tooltip>"Alt+A"</tooltip>
+       <flags>u2</flags>
       </Button>
       <Button>
        <pos>u1</pos>
@@ -3281,7 +2571,8 @@
 	 <key>"&lt;Shift&gt;F2"</key>
 	</BFace>
        </BFaces>
-       <flags>u0</flags>
+       <tooltip>"F2"</tooltip>
+       <flags>u2</flags>
       </Button>
       <Button>
        <pos>u4</pos>
@@ -3316,19 +2607,8 @@
        <BFaces>
 	<BFace>
 	 <face>u0</face>
-	 <label>"XTerm"</label>
+	 <label>"Terminal"</label>
 	 <cmdseq>"new_shell"</cmdseq>
-	</BFace>
-       </BFaces>
-       <flags>u0</flags>
-      </Button>
-      <Button>
-       <pos>u7</pos>
-       <BFaces>
-	<BFace>
-	 <face>u0</face>
-	 <label>"Touch"</label>
-	 <cmdseq>"touch"</cmdseq>
 	</BFace>
        </BFaces>
        <flags>u0</flags>
@@ -3352,7 +2632,6 @@
 	 <cmdseq>"SelectShell"</cmdseq>
 	</BFace>
        </BFaces>
-       <tooltip>"This uses command arguments to &quot;fake&quot; the SelectRE command"</tooltip>
        <flags>u2</flags>
       </Button>
       <Button>
@@ -3376,13 +2655,13 @@
        <BFaces>
 	<BFace>
 	 <face>u0</face>
-	 <label>"bzip"</label>
-	 <cmdseq>"compress_bzip"</cmdseq>
+	 <label>"gzip"</label>
+	 <cmdseq>"compress_gzip"</cmdseq>
 	</BFace>
 	<BFace>
 	 <face>u1</face>
-	 <label>"bunzip"</label>
-	 <cmdseq>"uncompress_bzip"</cmdseq>
+	 <label>"gunzip"</label>
+	 <cmdseq>"uncompress_gzip"</cmdseq>
 	</BFace>
        </BFaces>
        <flags>u2</flags>
@@ -3420,7 +2699,7 @@
 	<BFace>
 	 <face>u0</face>
 	 <label>"SelectRE"</label>
-	 <cmdseq>"SelectRE {It:&quot;Home-grown RE Selection&quot;} set={Im:&quot;Set&quot;=&quot;&apos;All rows&apos;&quot;,&quot;Selected&quot;,&quot;Unselected&quot;} type={Im:&quot;Type&quot;=&quot;&apos;All types&apos;&quot;,&quot;&apos;Directories only&apos;&quot;,&quot;&apos;Non-directories only&apos;&quot;} action={Im:&quot;Action&quot;=&quot;Select&quot;,&quot;Unselect&quot;,&quot;Toggle&quot;} full={Ix:&quot;Require full match?&quot;*} {Is:&quot;RE&quot;}"</cmdseq>
+	 <cmdseq>"SelectRE {It:&quot;Home-grown RE Selection&quot;} set={Im:&quot;Set&quot;=&quot;All rows&quot;,&quot;Selected&quot;,&quot;Unselected&quot;} type={Im:&quot;Type&quot;=&quot;All types&quot;,&quot;Directories only&quot;,&quot;Non-directories only&quot;} action={Im:&quot;Action&quot;=&quot;Select&quot;,&quot;Unselect&quot;,&quot;Toggle&quot;} full={Ix:&quot;Require full match?&quot;*} {Is:&quot;RE&quot;}"</cmdseq>
 	</BFace>
 	<BFace>
 	 <face>u1</face>
@@ -3435,8 +2714,7 @@
        <BFaces>
 	<BFace>
 	 <face>u0</face>
-	 <label>"diff"</label>
-	 <cmdseq>"diff_kdiff3"</cmdseq>
+	 <cmdseq>""</cmdseq>
 	</BFace>
        </BFaces>
        <flags>u0</flags>
@@ -3468,11 +2746,11 @@
   <PathList>
    <Path>
     <index>0</index>
-    <path>"/usr/share/pixamps/*.xpm:/usr/share/gentoo/icons"</path>
+    <path>"icons:/usr/share/gentoo/icons"</path>
    </Path>
    <Path>
     <index>1</index>
-    <path>"~"</path>
+    <path>"~/.config/gentoo"</path>
    </Path>
    <Path>
     <index>2</index>
@@ -3492,10 +2770,10 @@
  <Windows>
   <Window>
    <id>u0</id>
-   <x>941</x>
-   <y>540</y>
+   <x>619</x>
+   <y>123</y>
    <w>956</w>
-   <h>1161</h>
+   <h>1041</h>
    <pos_use>FALSE</pos_use>
    <pos_update>FALSE</pos_update>
    <size_use>TRUE</size_use>
@@ -3503,21 +2781,21 @@
   </Window>
   <Window>
    <id>u1</id>
-   <x>32</x>
-   <y>32</y>
-   <w>639</w>
+   <x>96</x>
+   <y>66</y>
+   <w>1001</w>
    <h>600</h>
-   <pos_use>FALSE</pos_use>
-   <pos_update>FALSE</pos_update>
+   <pos_use>TRUE</pos_use>
+   <pos_update>TRUE</pos_update>
    <size_use>TRUE</size_use>
-   <size_update>FALSE</size_update>
+   <size_update>TRUE</size_update>
   </Window>
   <Window>
    <id>u2</id>
    <x>32</x>
    <y>32</y>
-   <w>846</w>
-   <h>651</h>
+   <w>1169</w>
+   <h>1007</h>
    <pos_use>FALSE</pos_use>
    <pos_update>FALSE</pos_update>
    <size_use>TRUE</size_use>
@@ -3545,16 +2823,20 @@
  <Controls>
   <Keys>
    <Key>
+    <keyname>"&lt;Alt&gt;&lt;Mod2&gt;1"</keyname>
+    <cmdseq>"ActivateLeft"</cmdseq>
+   </Key>
+   <Key>
+    <keyname>"&lt;Alt&gt;&lt;Mod2&gt;2"</keyname>
+    <cmdseq>"ActivateRight"</cmdseq>
+   </Key>
+   <Key>
+    <keyname>"&lt;Control&gt;&lt;Mod2&gt;F8"</keyname>
+    <cmdseq>"Rerun"</cmdseq>
+   </Key>
+   <Key>
     <keyname>"&lt;Control&gt;Tab"</keyname>
     <cmdseq>"DirFromOther"</cmdseq>
-   </Key>
-   <Key>
-    <keyname>"&lt;Control&gt;g"</keyname>
-    <cmdseq>"DpGotoRow {It:&quot;Jump To Row Matching&quot;} re=^{Is:&quot;Regular Expression&quot;} focus={Ix:&quot;Focus Destination?&quot;}"</cmdseq>
-   </Key>
-   <Key>
-    <keyname>"&lt;Control&gt;l"</keyname>
-    <cmdseq>"DpFocusPath select=true"</cmdseq>
    </Key>
    <Key>
     <keyname>"&lt;Control&gt;r"</keyname>
@@ -3569,16 +2851,28 @@
     <cmdseq>"MenuPopup"</cmdseq>
    </Key>
    <Key>
-    <keyname>"&lt;Shift&gt;Down"</keyname>
-    <cmdseq>"DpFocus select=true next"</cmdseq>
+    <keyname>"&lt;Mod2&gt;q"</keyname>
+    <cmdseq>"Quit"</cmdseq>
+   </Key>
+   <Key>
+    <keyname>"&lt;Mod2&gt;space"</keyname>
+    <cmdseq>"ActivateOther"</cmdseq>
+   </Key>
+   <Key>
+    <keyname>"&lt;Primary&gt;&lt;Mod2&gt;g"</keyname>
+    <cmdseq>"DpGotoRow {It:&quot;Jump To Row Matching&quot;} re=^{Is:&quot;Regular Expression&quot;} focus={Ix:&quot;Focus Destination?&quot;}"</cmdseq>
+   </Key>
+   <Key>
+    <keyname>"&lt;Primary&gt;&lt;Mod2&gt;l"</keyname>
+    <cmdseq>"DpFocusPath select=true"</cmdseq>
+   </Key>
+   <Key>
+    <keyname>"&lt;Shift&gt;&lt;Mod2&gt;r"</keyname>
+    <cmdseq>"DpMaximize"</cmdseq>
    </Key>
    <Key>
     <keyname>"&lt;Shift&gt;Return"</keyname>
     <cmdseq>"DpFocusPath select=true"</cmdseq>
-   </Key>
-   <Key>
-    <keyname>"&lt;Shift&gt;Up"</keyname>
-    <cmdseq>"DpFocus select=true prev"</cmdseq>
    </Key>
    <Key>
     <keyname>"BackSpace"</keyname>
@@ -3589,28 +2883,8 @@
     <cmdseq>"Delete"</cmdseq>
    </Key>
    <Key>
-    <keyname>"Down"</keyname>
-    <cmdseq>"DpFocus next"</cmdseq>
-   </Key>
-   <Key>
-    <keyname>"End"</keyname>
-    <cmdseq>"DpFocus last"</cmdseq>
-   </Key>
-   <Key>
     <keyname>"F1"</keyname>
     <cmdseq>"About"</cmdseq>
-   </Key>
-   <Key>
-    <keyname>"F2"</keyname>
-    <cmdseq>"Rename"</cmdseq>
-   </Key>
-   <Key>
-    <keyname>"F3"</keyname>
-    <cmdseq>"edit_text_scite"</cmdseq>
-   </Key>
-   <Key>
-    <keyname>"F4"</keyname>
-    <cmdseq>"edit_text_kwrite"</cmdseq>
    </Key>
    <Key>
     <keyname>"F5"</keyname>
@@ -3621,40 +2895,12 @@
     <cmdseq>"Run"</cmdseq>
    </Key>
    <Key>
-    <keyname>"Home"</keyname>
-    <cmdseq>"DpFocus first"</cmdseq>
-   </Key>
-   <Key>
-    <keyname>"Insert"</keyname>
-    <cmdseq>"DpFocus none"</cmdseq>
-   </Key>
-   <Key>
     <keyname>"Left"</keyname>
     <cmdseq>"DirParent"</cmdseq>
    </Key>
    <Key>
-    <keyname>"Next"</keyname>
-    <cmdseq>"DpFocus pagenext"</cmdseq>
-   </Key>
-   <Key>
-    <keyname>"Prior"</keyname>
-    <cmdseq>"DpFocus pageprev"</cmdseq>
-   </Key>
-   <Key>
-    <keyname>"Return"</keyname>
-    <cmdseq>"DpFocus activate"</cmdseq>
-   </Key>
-   <Key>
-    <keyname>"Right"</keyname>
-    <cmdseq>"DpFocus activate"</cmdseq>
-   </Key>
-   <Key>
     <keyname>"Tab"</keyname>
     <cmdseq>"ActivateOther"</cmdseq>
-   </Key>
-   <Key>
-    <keyname>"Up"</keyname>
-    <cmdseq>"DpFocus prev"</cmdseq>
    </Key>
    <Key>
     <keyname>"c"</keyname>
@@ -3666,15 +2912,7 @@
    </Key>
    <Key>
     <keyname>"r"</keyname>
-    <cmdseq>"DpRecenter"</cmdseq>
-   </Key>
-   <Key>
-    <keyname>"space"</keyname>
-    <cmdseq>"DpFocus select=true same"</cmdseq>
-   </Key>
-   <Key>
-    <keyname>"x"</keyname>
-    <cmdseq>"new_shell"</cmdseq>
+    <cmdseq>"DpRecenter value=50"</cmdseq>
    </Key>
   </Keys>
   <MouseButtons>
@@ -3689,14 +2927,14 @@
     <cmdseq>"SelectType action=toggle"</cmdseq>
    </MouseButton>
    <MouseButton>
-    <button>u1</button>
-    <state>u9</state>
-    <cmdseq>"SelectType action=toggle"</cmdseq>
-   </MouseButton>
-   <MouseButton>
     <button>u2</button>
     <state>u0</state>
     <cmdseq>"DirParent"</cmdseq>
+   </MouseButton>
+   <MouseButton>
+    <button>u2</button>
+    <state>u1</state>
+    <cmdseq>"SelectRow"</cmdseq>
    </MouseButton>
    <MouseButton>
     <button>u3</button>
@@ -3716,7 +2954,7 @@
   </MouseButtons>
   <ClickMClick>
    <cmdseq>"FileAction action=ClickMClick"</cmdseq>
-   <delay>0.400000</delay>
+   <delay>0.40000000596046448</delay>
   </ClickMClick>
   <Generals>
    <General>
