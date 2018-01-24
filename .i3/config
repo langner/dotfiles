@@ -122,6 +122,9 @@ bar {
     status_command i3status
 }
 
+# Do not show borders adjacent to screen edges.
+hide_edge_borders both
+
 # Xterm and default emulator should usually float
 for_window [instance="x-terminal-emulator"] floating enable
 for_window [instance="xterm"] floating enable
@@ -143,7 +146,16 @@ for_window [title="Figure 3"] floating enable
 # Images shown by imagemagick's display program
 for_window [instance="display"] floating enable
 
+# No borders for the browser.
+for_window [title=".*Google Chrome.*"] border pixel 0
+
+# For the conky window don't show any border.
+for_window [title="Conky.*"] border pixel 0
+
 # Background image, compositor and no timeout.
 exec_always --no-startup-id [[ -e /usr/bin/nitrogen ]] && nitrogen --restore || sh ~/.fehbg
 exec_always --no-startup-id xcompmgr &
 exec_always --no-startup-id xset s 0 0
+
+# Don't focus or raise windows under mouse (needs click).
+focus_follows_mouse no
