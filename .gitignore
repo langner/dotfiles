@@ -18,6 +18,8 @@
 
 /backup*
 /data
+/library
+/movies
 /music
 /public*
 /tmp*
