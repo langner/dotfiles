@@ -196,18 +196,18 @@
  </DirPanes>
  <CmdSeqs>
   <CmdSeq>
-   <name>"mouse_right"</name>
+   <name>"run_script"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
-     <type>"Built-In"</type>
-     <def>"SelectRow action=select"</def>
+     <type>"External"</type>
+     <def>"/usr/bin/env bash {fup}"</def>
      <flags>0</flags>
-    </CmdRow>
-    <CmdRow>
-     <type>"Built-In"</type>
-     <def>"MenuPopup"</def>
-     <flags>0</flags>
+     <CX_External>
+      <gflags>16</gflags>
+      <bflags>20</bflags>
+      <aflags>0</aflags>
+     </CX_External>
     </CmdRow>
    </CmdRows>
   </CmdSeq>
@@ -239,17 +239,17 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"uncompress_tar_gzip"</name>
-   <flags>1</flags>
+   <name>"play_mod"</name>
+   <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"tar xzf {fup}"</def>
+     <def>"xmp {fup}"</def>
      <flags>0</flags>
      <CX_External>
-      <gflags>0</gflags>
-      <bflags>8</bflags>
-      <aflags>2</aflags>
+      <gflags>3</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
      </CX_External>
     </CmdRow>
    </CmdRows>
@@ -280,6 +280,22 @@
      <flags>0</flags>
      <CX_External>
       <gflags>4</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"run_calculator"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"gnome-calculator"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>3</gflags>
       <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
@@ -319,15 +335,15 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"play_sample"</name>
+   <name>"view_zip"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"aplay {fup}"</def>
+     <def>"unzip -v {fup}"</def>
      <flags>0</flags>
      <CX_External>
-      <gflags>0</gflags>
+      <gflags>4</gflags>
       <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
@@ -344,22 +360,6 @@
      <flags>0</flags>
      <CX_External>
       <gflags>0</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_zip"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"unzip -v {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>4</gflags>
       <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
@@ -867,6 +867,38 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
+   <name>"view_ps"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"gv {fut}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>1</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"view_deb"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"dpkg-deb -c {fup}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>4</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
    <name>"play_sid"</name>
    <flags>0</flags>
    <CmdRows>
@@ -876,6 +908,22 @@
      <flags>0</flags>
      <CX_External>
       <gflags>1</gflags>
+      <bflags>0</bflags>
+      <aflags>0</aflags>
+     </CX_External>
+    </CmdRow>
+   </CmdRows>
+  </CmdSeq>
+  <CmdSeq>
+   <name>"test_input"</name>
+   <flags>0</flags>
+   <CmdRows>
+    <CmdRow>
+     <type>"External"</type>
+     <def>"echo {It:&quot;String input defaults to first selected filename:&quot;} {It:&quot;-&quot;} {Is:&quot;Name:&quot;=&quot;prefix-{fQ}-postfix&quot;}"</def>
+     <flags>0</flags>
+     <CX_External>
+      <gflags>0</gflags>
       <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
@@ -899,18 +947,18 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"convert_mp3"</name>
-   <flags>1</flags>
+   <name>"mouse_right"</name>
+   <flags>0</flags>
    <CmdRows>
     <CmdRow>
-     <type>"External"</type>
-     <def>"bash -c &apos;mpg123 -q -w $(basename {f} .mp3).wav {fup}&apos;"</def>
+     <type>"Built-In"</type>
+     <def>"SelectRow action=select"</def>
      <flags>0</flags>
-     <CX_External>
-      <gflags>0</gflags>
-      <bflags>4</bflags>
-      <aflags>1</aflags>
-     </CX_External>
+    </CmdRow>
+    <CmdRow>
+     <type>"Built-In"</type>
+     <def>"MenuPopup"</def>
+     <flags>0</flags>
     </CmdRow>
    </CmdRows>
   </CmdSeq>
@@ -931,17 +979,17 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"run_script"</name>
-   <flags>0</flags>
+   <name>"convert_mp3"</name>
+   <flags>1</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"/usr/bin/env bash {fup}"</def>
+     <def>"bash -c &apos;mpg123 -q -w $(basename {f} .mp3).wav {fup}&apos;"</def>
      <flags>0</flags>
      <CX_External>
-      <gflags>16</gflags>
-      <bflags>20</bflags>
-      <aflags>0</aflags>
+      <gflags>0</gflags>
+      <bflags>4</bflags>
+      <aflags>1</aflags>
      </CX_External>
     </CmdRow>
    </CmdRows>
@@ -963,63 +1011,31 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"view_ps"</name>
-   <flags>0</flags>
+   <name>"uncompress_tar_gzip"</name>
+   <flags>1</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"gv {fut}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>1</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"uncompress_gzip"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"gunzip {Fup}"</def>
+     <def>"tar xzf {fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>0</gflags>
-      <bflags>0</bflags>
-      <aflags>1</aflags>
+      <bflags>8</bflags>
+      <aflags>2</aflags>
      </CX_External>
     </CmdRow>
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"play_mod"</name>
+   <name>"view_video"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"xmp {fup}"</def>
+     <def>"mplayer -quiet -vo x11 {fup}"</def>
      <flags>0</flags>
      <CX_External>
-      <gflags>3</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"run_calculator"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"gnome-calculator"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>3</gflags>
+      <gflags>0</gflags>
       <bflags>0</bflags>
       <aflags>0</aflags>
      </CX_External>
@@ -1043,28 +1059,12 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"view_deb"</name>
+   <name>"play_sample"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"dpkg-deb -c {fup}"</def>
-     <flags>0</flags>
-     <CX_External>
-      <gflags>4</gflags>
-      <bflags>0</bflags>
-      <aflags>0</aflags>
-     </CX_External>
-    </CmdRow>
-   </CmdRows>
-  </CmdSeq>
-  <CmdSeq>
-   <name>"view_video"</name>
-   <flags>0</flags>
-   <CmdRows>
-    <CmdRow>
-     <type>"External"</type>
-     <def>"mplayer -quiet -vo x11 {fup}"</def>
+     <def>"aplay {fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>0</gflags>
@@ -1075,17 +1075,17 @@
    </CmdRows>
   </CmdSeq>
   <CmdSeq>
-   <name>"test_input"</name>
+   <name>"uncompress_gzip"</name>
    <flags>0</flags>
    <CmdRows>
     <CmdRow>
      <type>"External"</type>
-     <def>"echo {It:&quot;String input defaults to first selected filename:&quot;} {It:&quot;-&quot;} {Is:&quot;Name:&quot;=&quot;prefix-{fQ}-postfix&quot;}"</def>
+     <def>"gunzip {Fup}"</def>
      <flags>0</flags>
      <CX_External>
       <gflags>0</gflags>
       <bflags>0</bflags>
-      <aflags>0</aflags>
+      <aflags>1</aflags>
      </CX_External>
     </CmdRow>
    </CmdRows>
@@ -1303,16 +1303,16 @@
      <color>C8080,0000,3333</color>
     </Property>
     <Property>
-     <name>"Edit"</name>
-     <action>"edit_image"</action>
-    </Property>
-    <Property>
      <name>"View"</name>
      <action>"view_image"</action>
     </Property>
     <Property>
      <name>"uIcon"</name>
      <icon>"Image.xpm"</icon>
+    </Property>
+    <Property>
+     <name>"Edit"</name>
+     <action>"edit_image"</action>
     </Property>
    </Properties>
   </Style>
@@ -1508,20 +1508,20 @@
    <expand>TRUE</expand>
    <Properties>
     <Property>
-     <name>"Edit"</name>
-     <action>"edit_text"</action>
+     <name>"View"</name>
+     <action>"ViewText encoding=ISO-8859-1"</action>
     </Property>
     <Property>
      <name>"uFG"</name>
      <color>C0000,6666,3333</color>
     </Property>
     <Property>
-     <name>"View"</name>
-     <action>"ViewText encoding=ISO-8859-1"</action>
-    </Property>
-    <Property>
      <name>"uIcon"</name>
      <icon>"txt.xpm"</icon>
+    </Property>
+    <Property>
+     <name>"Edit"</name>
+     <action>"edit_text"</action>
     </Property>
    </Properties>
   </Style>
@@ -2239,6 +2239,14 @@
    <style>"3GP"</style>
   </FileType>
   <FileType>
+   <name>"Video, MP4"</name>
+   <mode>32768</mode>
+   <name_re>"\\.mp4$"</name_re>
+   <name_glob>FALSE</name_glob>
+   <name_nocase>TRUE</name_nocase>
+   <style>"MPEG"</style>
+  </FileType>
+  <FileType>
    <name>"Video, WMV"</name>
    <mode>32768</mode>
    <suffix>".wmv"</suffix>
@@ -2797,8 +2805,8 @@
   </Window>
   <Window>
    <id>u1</id>
-   <x>180</x>
-   <y>34</y>
+   <x>-61</x>
+   <y>-27</y>
    <w>1520</w>
    <h>910</h>
    <pos_use>TRUE</pos_use>
