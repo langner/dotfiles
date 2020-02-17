@@ -8,6 +8,7 @@ floating_modifier $mod
 
 # Start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
+bindsym $mod+Shift+d exec "rofi -show drun"
 
 # Reload the configuration file
 bindsym $mod+Shift+C reload
@@ -119,6 +120,15 @@ mode "resize" {
 
 # Start i3bar
 bar {
+    colors {
+        background #1f242f
+
+        # Colors for borders, background and text.
+        focused_workspace       #2f343f #bf616a #d8dee8
+        active_workspace        #2f343f #2f343f #d8dee8
+        inactive_workspace      #2f343f #2f343f #d8dee8
+        urgent_workspace        #2f343f #ebcb8b #2f343f
+    }
     status_command i3status
 }
 
