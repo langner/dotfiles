@@ -156,8 +156,9 @@ for_window [title="Figure 3"] floating enable
 # Images shown by imagemagick's display program
 for_window [instance="display"] floating enable
 
-# No borders for the browser.
+# No borders for browsers.
 for_window [title=".*Google Chrome.*"] border pixel 0
+for_window [title=".*Firefox.*"] border pixel 0
 
 # For the conky window don't show any border.
 for_window [title="Conky.*"] border pixel 0
