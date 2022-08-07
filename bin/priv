@@ -1,0 +1,28 @@
+# A script to mount/unmount a private encrypted directory.
+# Checks first whether the mount point is already mounted.
+# Mount -- when 'on' is in the command line.
+# Unmount -- when 'off' is in the command line.
+
+# Assume the encrypted and decrypted directories have been set,
+#   or set them here below.
+# ECRYPTFS_ENCRYPTED=/home/me/dir/encrypted
+# ECRYPTFS_DECRYPTED=/home/me/dir/decrypted
+
+if [[ $@ == *on* ]] && ! grep -q "${ECRYPTFS_DECRYPTED} " /proc/mounts
+then
+	mkdir -p $ECRYPTFS_DECRYPTED
+	echo "$ECRYPTFS_ENCRYPTED $ECRYPTFS_DECRYPTED ecryptfs" > ~/.ecryptfs/priv.conf
+	read -s -p "Ecryptfs password: " pass
+	echo ""
+	output=$(echo $pass | ecryptfs-add-passphrase --fnek -)
+	sig=$(echo $output | cut -d '[' -f 2 | cut -d ']' -f 1)
+	echo $sig > ~/.ecryptfs/priv.sig
+	echo $sig >> ~/.ecryptfs/priv.sig
+	mount.ecryptfs_private priv
+	exit 0
+elif [[ $@ == *off* ]] && grep -q $ECRYPTFS_DECRYPTED /proc/mounts
+then
+	umount.ecryptfs_private priv
+	rmdir $ECRYPTFS_DECRYPTED
+	exit 0
+fi

@@ -5,17 +5,17 @@
 
 # Assume the encrypted and decrypted directories have been set,
 #   or set them here below.
-# PRIVATE_ENCRYPTED=/home/me/dir/encrypted
-# PRIVATE_DECRYPTED=/home/me/dir/decrypted
+# ENCFS_ENCRYPTED=/home/me/dir/encrypted
+# ENCFS_DECRYPTED=/home/me/dir/decrypted
 
-if [[ $@ == *on* ]] && ! grep -q data/personal/private /proc/mounts
+if [[ $@ == *on* ]] && ! grep -q "$ENCFS_DECRYPTED " /proc/mounts
 then
-	mkdir -p $PRIVATE_DECRYPTED
-	encfs $PRIVATE_ENCRYPTED $PRIVATE_DECRYPTED
+	mkdir -p $ENCFS_DECRYPTED
+	encfs $ENCFS_ENCRYPTED $ENCFS_DECRYPTED
 	exit 0
-elif [[ $@ == *off* ]] && grep -q $PRIVATE_DECRYPTED /proc/mounts
+elif [[ $@ == *off* ]] && grep -q $ENCFS_DECRYPTED /proc/mounts
 then
-	fusermount -u $PRIVATE_DECRYPTED
-	rmdir $PRIVATE_DECRYPTED
+	fusermount -u $ENCFS_DECRYPTED
+	rmdir $ENCFS_DECRYPTED
 	exit 0
 fi
