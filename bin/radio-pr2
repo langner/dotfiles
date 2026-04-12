@@ -1,1 +1,0 @@
-mplayer -cache 256 -loop 0 http://stream.polskieradio.pl/program2
