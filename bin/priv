@@ -5,24 +5,17 @@
 
 # Assume the encrypted and decrypted directories have been set,
 #   or set them here below.
-# ECRYPTFS_ENCRYPTED=/home/me/dir/encrypted
-# ECRYPTFS_DECRYPTED=/home/me/dir/decrypted
+# PRIV_ENCRYPTED=/home/me/dir/encrypted
+# PRIV_DECRYPTED=/home/me/dir/decrypted
 
-if [[ $@ == *on* ]] && ! grep -q "${ECRYPTFS_DECRYPTED} " /proc/mounts
+if [[ $@ == *on* ]] && ! grep -q "${PRIV_DECRYPTED} " /proc/mounts
 then
-	mkdir -p $ECRYPTFS_DECRYPTED
-	echo "$ECRYPTFS_ENCRYPTED $ECRYPTFS_DECRYPTED ecryptfs" > ~/.ecryptfs/priv.conf
-	read -s -p "Ecryptfs password: " pass
-	echo ""
-	output=$(echo $pass | ecryptfs-add-passphrase --fnek -)
-	sig=$(echo $output | cut -d '[' -f 2 | cut -d ']' -f 1)
-	echo $sig > ~/.ecryptfs/priv.sig
-	echo $sig >> ~/.ecryptfs/priv.sig
-	mount.ecryptfs_private priv
+	mkdir -p $PRIV_DECRYPTED
+	gocryptfs ${PRIV_ENCRYPTED} ${PRIV_DECRYPTED}
 	exit 0
-elif [[ $@ == *off* ]] && grep -q $ECRYPTFS_DECRYPTED /proc/mounts
+elif [[ $@ == *off* ]] && grep -q $PRIV_DECRYPTED /proc/mounts
 then
-	umount.ecryptfs_private priv
-	rmdir $ECRYPTFS_DECRYPTED
+	umount $PRIV_DECRYPTED
+	rmdir $PRIV_DECRYPTED
 	exit 0
 fi
