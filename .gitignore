@@ -1,6 +1,7 @@
 .aptitude
 .bash_aliases
 .cache
+.claude
 .ecryptfs
 .fehbg
 .gitconfig
