@@ -2,6 +2,7 @@
 .bash_aliases
 .cache
 .claude
+CLAUDE.md
 .ecryptfs
 .fehbg
 .gitconfig
