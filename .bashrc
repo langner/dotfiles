@@ -38,9 +38,8 @@ shopt -s checkwinsize
 # See lesspipe(1) for details.
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# Support more colors in the terminal if possible. Not the question mark
-# there, since Ubuntu will use a plus instead of a dash in terminfo.
-if [ -e /usr/share/terminfo/x/xterm?256color ]; then
+# Support more colors in the terminal if possible.
+if [ -e /usr/share/terminfo/x/xterm+256color ]; then
     export TERM='xterm-256color'
 else
     export TERM='xterm-color'
